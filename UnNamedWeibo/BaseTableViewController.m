@@ -45,6 +45,7 @@
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 250;
+
     
     //去除黑线
 //    self.navigationController.navigationBar.clipsToBounds = YES;

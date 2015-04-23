@@ -27,7 +27,7 @@
 #import "KYPopInteractiveTransition.h"
 #import "JellyButton.h"
 #import "DetailViewController.h"
-#import "UnNamedWeibo-Swift.h"
+//#import "UnNamedWeibo-Swift.h"
 
 
 
@@ -58,8 +58,21 @@
 
 
 -(void)hideTabBar:(BOOL)flag {
-    RAMAnimatedTabBarController *atc = (RAMAnimatedTabBarController *)self.tabBarController;
-    [atc hideRAMAnimatedTabBar:flag];
+//    RAMAnimatedTabBarController *atc = (RAMAnimatedTabBarController *)self.tabBarController;
+//    [atc hideRAMAnimatedTabBar:flag];
+    UITabBar *tabbar = self.tabBarController.tabBar;
+    if (flag == YES) {
+        [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            tabbar.transform = CGAffineTransformMakeTranslation(0, 64);
+//            tabbar.hidden = YES;
+        } completion:nil];
+    }
+    if (flag == NO) {
+        [UIView animateWithDuration:0.7 delay:0.0 usingSpringWithDamping:0.6f initialSpringVelocity:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            tabbar.transform = CGAffineTransformIdentity;
+//            tabbar.hidden = NO;
+        } completion:nil];
+    }
 }
 
 
@@ -85,6 +98,7 @@
                                                   toViewController:(UIViewController *)toVC{
     
     if (operation == UINavigationControllerOperationPush) {
+        [self hideTabBar:YES];
         KYPushTransition *push = [KYPushTransition new];
         return push;
     }else if (operation == UINavigationControllerOperationPop){
@@ -99,13 +113,12 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self hideTabBar:NO];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(prepareToLoadWeibo) name:kWeiboAuthSuccessNotification object:nil];
     
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [self hideTabBar:YES];
+
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -120,6 +133,7 @@
     self.navigationItem.leftItemsSupplementBackButton = NO;
     self.isNeedScrollBarIndicator = YES;
     self.navigationController.delegate = self;
+//    self.hidesBottomBarWhenPushed = YES;
 //    hud = [[KYLoadingHUD alloc]initWithFrame:CGRectMake(self.view.bounds.size.width / 2 - 50, self.view.bounds.size.height / 2 -100, 100, 100)];
 //    [self.view addSubview:hud];
 

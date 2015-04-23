@@ -7,7 +7,7 @@
 //
 
 #import "KYPopTransition.h"
-
+#import "HomeTableViewController.h"
 @interface KYPopTransition()
 
 @property (nonatomic,strong)id<UIViewControllerContextTransitioning> transitionContext;
@@ -55,14 +55,16 @@
 
         //旋转fromView 90度
         toView.layer.transform = CATransform3DMakeRotation(0, 0, 1.0, 0);
-//        toVC.tabBarController.tabBar.transform = CGAffineTransformIdentity;
 
     } completion:^(BOOL finished) {
 
         toView.layer.anchorPoint = CGPointMake(0.5, 0.5);
         toView.layer.position    = CGPointMake(CGRectGetMidX([UIScreen mainScreen].bounds), CGRectGetMidY([UIScreen mainScreen].bounds));
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
-
+        if ([toVC isKindOfClass:[HomeTableViewController class]] && ![transitionContext transitionWasCancelled]) {
+            HomeTableViewController *homeVC = (HomeTableViewController *)toVC;
+            [homeVC hideTabBar:NO];
+        }
     }];
     
 }

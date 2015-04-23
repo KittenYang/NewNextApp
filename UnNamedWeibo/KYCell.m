@@ -28,6 +28,7 @@
     self.avator.layer.borderWidth = 1.0f;
     self.avator.layer.borderColor = [UIColor whiteColor].CGColor;
 
+
     [self createLine];
     [self addPanGesture];
     

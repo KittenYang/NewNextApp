@@ -101,6 +101,7 @@
                             <outlet property="delegate" destination="iC9-I2-GTQ" id="pMJ-sS-AAL"/>
                         </connections>
                     </tableView>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6X-I5-bRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -569,7 +570,7 @@
         <!--MainTabViewController-->
         <scene sceneID="JDB-aO-pyc">
             <objects>
-                <tabBarController title="MainTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="VFi-yD-54H" customClass="RAMAnimatedTabBarController" customModule="UnNamedWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="MainTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="VFi-yD-54H" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="aZc-uK-BkW">

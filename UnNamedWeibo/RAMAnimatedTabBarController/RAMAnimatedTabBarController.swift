@@ -52,7 +52,7 @@ class RAMAnimatedTabBarItem: UITabBarItem {
 class RAMAnimatedTabBarController: UITabBarController {
 
     var iconsView: [(icon: UIImageView, textLabel: UILabel)] = Array()
-
+//    var viewContainer__ = UIView();
 // MARK: life circle
 
     override func viewDidLoad() {
@@ -75,17 +75,34 @@ class RAMAnimatedTabBarController: UITabBarController {
         let icons  = iconsView
         
         if (flag == true ) {
-            self.tabBar.hidden = true
-            for icon in icons {
-                icon.icon.hidden = true
-                icon.textLabel.hidden = true
-            }
+            UIView.animateKeyframesWithDuration(0.7, delay: 0.0, options: nil, animations: { () -> Void in
+                self.tabBar.transform = CGAffineTransformMakeTranslation(0, 64)
+//                self.viewContainer__.transform = CGAffineTransformMakeTranslation(0, 64)
+                self.tabBar.userInteractionEnabled = false;
+                for icon in icons {
+                    icon.icon.transform = CGAffineTransformMakeTranslation(0, 64)
+                    icon.textLabel.transform = CGAffineTransformMakeTranslation(0, 64)
+                    icon.icon.userInteractionEnabled = false;
+                    icon.textLabel.userInteractionEnabled = false;
+                }
+            }, completion: nil)
+            
         } else {
-            self.tabBar.hidden = false
-            for icon in icons {
-                icon.icon.hidden = false
-                icon.textLabel.hidden = false
-            }
+
+            UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.0, options: .BeginFromCurrentState, animations: { () -> Void in
+
+                self.tabBar.transform = CGAffineTransformIdentity
+//                self.viewContainer__.transform = CGAffineTransformIdentity
+                self.tabBar.userInteractionEnabled = true;
+                for icon in icons {
+                    icon.icon.transform = CGAffineTransformIdentity
+                    icon.textLabel.transform = CGAffineTransformIdentity
+                    icon.icon.userInteractionEnabled = true;
+                    icon.textLabel.userInteractionEnabled = true;
+                }
+
+            }, completion: nil)
+
         }
     }
     
@@ -204,18 +221,18 @@ class RAMAnimatedTabBarController: UITabBarController {
     }
 
     func createViewContainer() -> UIView {
-        var viewContainer = UIView();
-//        viewContainer.backgroundColor = UIColor.clearColor() // for test
-        viewContainer.setTranslatesAutoresizingMaskIntoConstraints(false)
-        view.addSubview(viewContainer)
+        var viewContainer__ = UIView();
+        viewContainer__.backgroundColor = UIColor.blueColor() // for test
+        viewContainer__.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.addSubview(viewContainer__)
 
         // add gesture
         var tapGesture = UITapGestureRecognizer(target: self, action: "tapHeandler:")
         tapGesture.numberOfTouchesRequired = 1
-        viewContainer.addGestureRecognizer(tapGesture)
+        viewContainer__.addGestureRecognizer(tapGesture)
 
         // add constrains
-        var constY = NSLayoutConstraint(item: viewContainer,
+        var constY = NSLayoutConstraint(item: viewContainer__,
                                    attribute: NSLayoutAttribute.Bottom,
                                    relatedBy: NSLayoutRelation.Equal,
                                       toItem: view,
@@ -225,16 +242,16 @@ class RAMAnimatedTabBarController: UITabBarController {
 
         view.addConstraint(constY)
 
-        var constH = NSLayoutConstraint(item: viewContainer,
+        var constH = NSLayoutConstraint(item: viewContainer__,
                                    attribute: NSLayoutAttribute.Height,
                                    relatedBy: NSLayoutRelation.Equal,
                                       toItem: nil,
                                    attribute: NSLayoutAttribute.NotAnAttribute,
                                   multiplier: 1,
                                     constant: tabBar.frame.size.height)
-        viewContainer.addConstraint(constH)
+        viewContainer__.addConstraint(constH)
 
-        return viewContainer
+        return viewContainer__
     }
 
 // MARK: actions

@@ -17,4 +17,6 @@
 @property(nonatomic,retain)NSMutableArray *data;   //为tableView提供数据,基本单位是WeiboModel
 @property (nonatomic,retain)NSMutableArray *weibos;
 //@property NSMutableDictionary *estimatedRowHeightCache;
+
+-(void)hideTabBar:(BOOL)flag;
 @end

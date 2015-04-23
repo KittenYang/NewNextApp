@@ -8,6 +8,7 @@
 
 
 #import "KYPushTransition.h"
+#import "UnNamedWeibo-Swift.h"
 
 @interface KYPushTransition()
 
