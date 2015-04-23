@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/SDWebImage-YLGIFImage" "${PODS_ROOT}/Headers/Public/SKSplashView" "${PODS_ROOT}/Headers/Public/Shimmer" "${PODS_ROOT}/Headers/Public/YLGIFImage"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/SDWebImage" -isystem "${PODS_ROOT}/Headers/Public/SDWebImage-YLGIFImage" -isystem "${PODS_ROOT}/Headers/Public/SKSplashView" -isystem "${PODS_ROOT}/Headers/Public/Shimmer" -isystem "${PODS_ROOT}/Headers/Public/YLGIFImage"
+OTHER_LDFLAGS = -ObjC -l"Pods-SDWebImage" -l"Pods-SDWebImage-YLGIFImage" -l"Pods-SKSplashView" -l"Pods-Shimmer" -l"Pods-YLGIFImage" -framework "CoreGraphics" -framework "Foundation" -framework "ImageIO" -framework "MobileCoreServices" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

@@ -1,0 +1,1 @@
+../../../SKSplashView/SKSplashView/SKSplashIcon.h

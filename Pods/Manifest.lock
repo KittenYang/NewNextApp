@@ -1,0 +1,38 @@
+PODS:
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage-YLGIFImage (0.2)
+  - SDWebImage/Core (3.7.1)
+  - Shimmer (1.0.2)
+  - SKSplashView (0.1.0)
+  - YLGIFImage (0.11)
+
+DEPENDENCIES:
+  - SDWebImage (from `https://github.com/liyong03/SDWebImage.git`)
+  - SDWebImage-YLGIFImage (from `https://github.com/liyong03/SDWebImage-YLGIFImage.git`)
+  - Shimmer (~> 1.0.2)
+  - SKSplashView
+  - YLGIFImage
+
+EXTERNAL SOURCES:
+  SDWebImage:
+    :git: https://github.com/liyong03/SDWebImage.git
+  SDWebImage-YLGIFImage:
+    :git: https://github.com/liyong03/SDWebImage-YLGIFImage.git
+
+CHECKOUT OPTIONS:
+  SDWebImage:
+    :commit: d3567259f2d1c8a1b191563aef1357eed081b600
+    :git: https://github.com/liyong03/SDWebImage.git
+  SDWebImage-YLGIFImage:
+    :commit: 601909292beefee7d231cdad73ef0bb7c9f64c95
+    :git: https://github.com/liyong03/SDWebImage-YLGIFImage.git
+
+SPEC CHECKSUMS:
+  SDWebImage: ff5239e81afa8f9cc29552712cac071183529f66
+  SDWebImage-YLGIFImage: c0d061245bd11e4293c39fb002484a741ab1f1ad
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  SKSplashView: 8cdb1bfccb5857cb141751d01b03cf132b110168
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
+
+COCOAPODS: 0.35.0

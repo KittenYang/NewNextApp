@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/BaseTableViewController.m \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/BaseTableViewController.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WeiboSDK.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WBHttpRequest.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WBHttpRequest+WeiboUser.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WBHttpRequest+WeiboShare.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WBHttpRequest+WeiboToken.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WBSDKRelationshipButton.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WBSDKBasicButton.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/libWeiboSDK/WBSDKCommentButton.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/CONST.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/KYCell.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/CellView.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/WeiboModel.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/UserModel.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/WeiboView.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/ReWeiboView.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/MLEmoji/MLEmojiLabel.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/MLEmoji/TTTAttributedLabel.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/Utils.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/RegexKitLite/RegexKitLite.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/ACTimeScroller.h \
+  /Users/KittenYang/Documents/Github/NextApp/UnNamedWeibo/JellyView.h

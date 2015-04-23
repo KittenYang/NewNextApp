@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VFi-yD-54H">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--UserViewController-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" userLabel="UserViewController" customClass="UserViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo4-17-EtK">
+                                <rect key="frame" x="283" y="290" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="lo4-17-EtK" secondAttribute="centerX" id="T9z-4Z-xbV"/>
+                            <constraint firstAttribute="centerY" secondItem="lo4-17-EtK" secondAttribute="centerY" id="V24-Ay-KA3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ooL-So-kcM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="1583"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="rDt-6t-S3P">
+            <objects>
+                <viewController id="KM4-9Z-XS3" userLabel="消息" customClass="MessageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BdU-vF-bHX"/>
+                        <viewControllerLayoutGuide type="bottom" id="2pp-bv-DvW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JiL-aR-2VZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="W2Y-wZ-vh5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wB9-nK-q7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1444" y="1651"/>
+        </scene>
+        <!--Detail Table View Controller-->
+        <scene sceneID="rvL-rd-Q0k">
+            <objects>
+                <tableViewController id="iC9-I2-GTQ" userLabel="Detail Table View Controller" customClass="DetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="Aff-J5-MD3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="86" id="SQX-t1-bFh">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SQX-t1-bFh" id="ZYX-ry-h3d">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N85-c9-Tcs">
+                                            <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="K5l-2f-BB0"/>
+                                                <constraint firstAttribute="height" constant="30" id="Qp5-SN-EAw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论用户01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGR-6R-e1Y">
+                                            <rect key="frame" x="40" y="5" width="100" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="69Y-QA-5xX"/>
+                                                <constraint firstAttribute="width" constant="100" id="tOO-gd-ZdN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N85-c9-Tcs" firstAttribute="top" secondItem="ZYX-ry-h3d" secondAttribute="top" constant="5" id="Zq0-TQ-dps"/>
+                                        <constraint firstItem="N85-c9-Tcs" firstAttribute="leading" secondItem="ZYX-ry-h3d" secondAttribute="leading" constant="5" id="l4i-St-6IH"/>
+                                        <constraint firstItem="jGR-6R-e1Y" firstAttribute="top" secondItem="ZYX-ry-h3d" secondAttribute="top" constant="5" id="qVC-bR-lka"/>
+                                        <constraint firstItem="jGR-6R-e1Y" firstAttribute="leading" secondItem="N85-c9-Tcs" secondAttribute="trailing" constant="5" id="vyU-83-MaS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iC9-I2-GTQ" id="ihX-WF-kIz"/>
+                            <outlet property="delegate" destination="iC9-I2-GTQ" id="pMJ-sS-AAL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6X-I5-bRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2156" y="2333"/>
+        </scene>
+        <!--Home Table View Controller-->
+        <scene sceneID="uqd-MP-q6I">
+            <objects>
+                <tableViewController id="xCt-L4-EeA" customClass="HomeTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="464" sectionHeaderHeight="22" sectionFooterHeight="22" id="SIf-K9-THH">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeiboCell" rowHeight="464" id="xlN-Eg-L5h" customClass="KYCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xlN-Eg-L5h" id="22v-tu-i6u">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahg-PD-yVw" userLabel="CellView" customClass="CellView">
+                                            <rect key="frame" x="5" y="35" width="590" height="418"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04-23 01:01" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7l-2m-WOR">
+                                                    <rect key="frame" x="52" y="0.0" width="53" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="53" id="5H8-dV-rL9"/>
+                                                        <constraint firstAttribute="height" constant="20" id="9Nw-ye-3k6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="来自 iPhone 6 " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmj-V0-INA">
+                                                    <rect key="frame" x="105" y="0.0" width="120" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Dpy-GP-QFP"/>
+                                                        <constraint firstAttribute="width" constant="120" id="Fpw-bK-VTH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCK-Zx-Qf9" userLabel="WeiboView" customClass="WeiboView">
+                                                    <rect key="frame" x="0.0" y="25" width="590" height="388"/>
+                                                    <subviews>
+                                                        <collectionView multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yIf-4U-N4w">
+                                                            <rect key="frame" x="0.0" y="253" width="590" height="130"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="130" id="ShI-DX-5rh"/>
+                                                            </constraints>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Nm-AE-4lj">
+                                                                <size key="itemSize" width="120" height="120"/>
+                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                            </collectionViewFlowLayout>
+                                                            <cells>
+                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="300" contentMode="scaleAspectFill" reuseIdentifier="weibo_image_cell" id="3gY-DX-EKX" customClass="CollectionViewCell">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="200" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitten" translatesAutoresizingMaskIntoConstraints="NO" id="2T3-Xg-cVa" customClass="YLImageView">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                                            </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4W-fI-Uye">
+                                                                                <rect key="frame" x="0.0" y="110" width="120" height="10"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="10" id="e1q-x4-yL8"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    </view>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="O4W-fI-Uye" secondAttribute="trailing" id="NKo-ig-NeC"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="2T3-Xg-cVa" secondAttribute="trailing" id="akw-X0-s8X"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="O4W-fI-Uye" secondAttribute="bottom" id="b0p-Lf-G2s"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="2T3-Xg-cVa" secondAttribute="bottom" id="d8x-gE-5HR"/>
+                                                                        <constraint firstItem="2T3-Xg-cVa" firstAttribute="top" secondItem="3gY-DX-EKX" secondAttribute="top" id="i2y-sm-dj1"/>
+                                                                        <constraint firstItem="O4W-fI-Uye" firstAttribute="leading" secondItem="3gY-DX-EKX" secondAttribute="leading" id="kD8-JP-5c1"/>
+                                                                        <constraint firstItem="2T3-Xg-cVa" firstAttribute="leading" secondItem="3gY-DX-EKX" secondAttribute="leading" id="nDH-qb-CnR"/>
+                                                                    </constraints>
+                                                                    <connections>
+                                                                        <outlet property="gifLabel" destination="O4W-fI-Uye" id="JgJ-sq-8xE"/>
+                                                                        <outlet property="weiboImage" destination="2T3-Xg-cVa" id="dow-0f-4Ie"/>
+                                                                    </connections>
+                                                                </collectionViewCell>
+                                                            </cells>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="hCK-Zx-Qf9" id="jJ3-It-ZQr"/>
+                                                                <outlet property="delegate" destination="hCK-Zx-Qf9" id="KEe-77-iRk"/>
+                                                            </connections>
+                                                        </collectionView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-Ej-uy3" userLabel="reWeiboView" customClass="ReWeiboView">
+                                                            <rect key="frame" x="0.0" y="55" width="590" height="190"/>
+                                                            <subviews>
+                                                                <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0P-cf-XCP" userLabel="reWeibo_text" customClass="MLEmojiLabel">
+                                                                    <rect key="frame" x="10" y="5" width="575" height="45"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <collectionView multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wWD-Yg-zal" userLabel="ReWeiboImgCollectionView">
+                                                                    <rect key="frame" x="0.0" y="55" width="590" height="130"/>
+                                                                    <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="130" id="Bk8-VK-f05"/>
+                                                                    </constraints>
+                                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Nq-dV-FMt">
+                                                                        <size key="itemSize" width="120" height="120"/>
+                                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                        <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                                    </collectionViewFlowLayout>
+                                                                    <cells>
+                                                                        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="reWeibo_image_cell" id="HNf-IG-2bZ" customClass="ReWeiboImgCollectionViewCell">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                                <subviews>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitten" translatesAutoresizingMaskIntoConstraints="NO" id="zws-wP-EpK" customClass="YLImageView">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                                                    </imageView>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSU-Kz-hj8">
+                                                                                        <rect key="frame" x="0.0" y="110" width="120" height="10"/>
+                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="height" constant="10" id="PC1-0o-BdH"/>
+                                                                                        </constraints>
+                                                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                            </view>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="bottom" secondItem="zws-wP-EpK" secondAttribute="bottom" id="BTP-3T-Enl"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="BSU-Kz-hj8" secondAttribute="trailing" id="CmD-QG-MHX"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="BSU-Kz-hj8" secondAttribute="bottom" id="FNw-yB-HTO"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="zws-wP-EpK" secondAttribute="trailing" id="ZaN-Ur-ZxR"/>
+                                                                                <constraint firstItem="BSU-Kz-hj8" firstAttribute="leading" secondItem="HNf-IG-2bZ" secondAttribute="leading" id="bVN-Fe-bTI"/>
+                                                                                <constraint firstItem="zws-wP-EpK" firstAttribute="leading" secondItem="HNf-IG-2bZ" secondAttribute="leading" id="gbG-nn-mmQ"/>
+                                                                                <constraint firstItem="zws-wP-EpK" firstAttribute="top" secondItem="HNf-IG-2bZ" secondAttribute="top" id="tIz-ou-CVd"/>
+                                                                            </constraints>
+                                                                            <connections>
+                                                                                <outlet property="reGifLabel" destination="BSU-Kz-hj8" id="fhK-P7-xOq"/>
+                                                                                <outlet property="reWeiboImage" destination="zws-wP-EpK" id="pDP-BS-Ge2"/>
+                                                                            </connections>
+                                                                        </collectionViewCell>
+                                                                    </cells>
+                                                                    <connections>
+                                                                        <outlet property="dataSource" destination="wW4-Ej-uy3" id="uzv-8W-Pra"/>
+                                                                        <outlet property="delegate" destination="wW4-Ej-uy3" id="Xs5-8p-WBf"/>
+                                                                    </connections>
+                                                                </collectionView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="wWD-Yg-zal" secondAttribute="bottom" constant="5" id="25b-dI-Yl5"/>
+                                                                <constraint firstAttribute="height" constant="190" id="FPO-jh-u9z"/>
+                                                                <constraint firstItem="wWD-Yg-zal" firstAttribute="top" secondItem="y0P-cf-XCP" secondAttribute="bottom" constant="5" id="Pwj-jR-TFF"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wWD-Yg-zal" secondAttribute="trailing" id="ad1-4c-vgL"/>
+                                                                <constraint firstItem="y0P-cf-XCP" firstAttribute="top" secondItem="wW4-Ej-uy3" secondAttribute="top" constant="5" id="ca4-Ml-281"/>
+                                                                <constraint firstAttribute="trailing" secondItem="y0P-cf-XCP" secondAttribute="trailing" constant="5" id="i1h-Gg-KCT"/>
+                                                                <constraint firstItem="wWD-Yg-zal" firstAttribute="leading" secondItem="wW4-Ej-uy3" secondAttribute="leading" id="k92-os-qGP"/>
+                                                                <constraint firstItem="y0P-cf-XCP" firstAttribute="leading" secondItem="wW4-Ej-uy3" secondAttribute="leading" constant="10" id="oSd-nc-Ynn"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="reCollectionViewHeight" destination="Bk8-VK-f05" id="yZ4-Zo-iPP"/>
+                                                                <outlet property="reWeiboHeight" destination="FPO-jh-u9z" id="ZvX-GJ-SX3"/>
+                                                                <outlet property="reWeiboImageCollectionView" destination="wWD-Yg-zal" id="1ZX-tI-B16"/>
+                                                                <outlet property="reWeiboText" destination="y0P-cf-XCP" id="ypP-Ai-h3N"/>
+                                                            </connections>
+                                                        </view>
+                                                        <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4i-jI-Rqb" userLabel="weibo_text" customClass="MLEmojiLabel">
+                                                            <rect key="frame" x="10" y="5" width="575" height="42"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="yIf-4U-N4w" secondAttribute="bottom" constant="5" id="MhK-wz-6Lx"/>
+                                                        <constraint firstItem="yIf-4U-N4w" firstAttribute="top" secondItem="wW4-Ej-uy3" secondAttribute="bottom" constant="8" id="OdD-hg-1ao"/>
+                                                        <constraint firstAttribute="trailing" secondItem="wW4-Ej-uy3" secondAttribute="trailing" id="PuW-vc-JmD"/>
+                                                        <constraint firstItem="o4i-jI-Rqb" firstAttribute="leading" secondItem="hCK-Zx-Qf9" secondAttribute="leading" constant="10" id="Ukv-RZ-iwh"/>
+                                                        <constraint firstItem="o4i-jI-Rqb" firstAttribute="top" secondItem="hCK-Zx-Qf9" secondAttribute="top" constant="5" id="V1Q-7O-PnR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="yIf-4U-N4w" secondAttribute="trailing" id="qDD-fh-Le0"/>
+                                                        <constraint firstItem="wW4-Ej-uy3" firstAttribute="leading" secondItem="hCK-Zx-Qf9" secondAttribute="leading" id="vwd-CH-gTW"/>
+                                                        <constraint firstItem="wW4-Ej-uy3" firstAttribute="top" secondItem="o4i-jI-Rqb" secondAttribute="bottom" constant="8" id="wus-O0-8Zk"/>
+                                                        <constraint firstItem="yIf-4U-N4w" firstAttribute="leading" secondItem="hCK-Zx-Qf9" secondAttribute="leading" id="zXf-fn-wtK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="o4i-jI-Rqb" secondAttribute="trailing" constant="5" id="zhR-lj-2xq"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="collectionViewHeight" destination="ShI-DX-5rh" id="TmY-7G-RT6"/>
+                                                        <outlet property="reWeiboView" destination="wW4-Ej-uy3" id="m4h-zA-HQl"/>
+                                                        <outlet property="weiboImageCollectionView" destination="yIf-4U-N4w" id="RQA-LY-s2p"/>
+                                                        <outlet property="weiboText" destination="o4i-jI-Rqb" id="Dut-GV-vC5"/>
+                                                    </connections>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="hCK-Zx-Qf9" firstAttribute="top" secondItem="ahg-PD-yVw" secondAttribute="top" constant="25" id="9Xc-6a-cME"/>
+                                                <constraint firstItem="Hmj-V0-INA" firstAttribute="leading" secondItem="U7l-2m-WOR" secondAttribute="trailing" id="Kop-xx-SQs"/>
+                                                <constraint firstItem="U7l-2m-WOR" firstAttribute="leading" secondItem="ahg-PD-yVw" secondAttribute="leading" constant="52" id="Kwk-Is-YjD"/>
+                                                <constraint firstItem="Hmj-V0-INA" firstAttribute="top" secondItem="ahg-PD-yVw" secondAttribute="top" id="VfN-JY-73b"/>
+                                                <constraint firstItem="U7l-2m-WOR" firstAttribute="top" secondItem="ahg-PD-yVw" secondAttribute="top" id="X5Z-js-cLX"/>
+                                                <constraint firstItem="hCK-Zx-Qf9" firstAttribute="leading" secondItem="ahg-PD-yVw" secondAttribute="leading" id="e2B-KA-XgY"/>
+                                                <constraint firstAttribute="trailing" secondItem="hCK-Zx-Qf9" secondAttribute="trailing" id="eVw-6A-rlf"/>
+                                                <constraint firstAttribute="bottom" secondItem="hCK-Zx-Qf9" secondAttribute="bottom" constant="5" id="h6j-Cr-csa"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="createDateLabel" destination="U7l-2m-WOR" id="lfd-Kt-3A9"/>
+                                                <outlet property="sourceLabel" destination="Hmj-V0-INA" id="bbt-BP-2z5"/>
+                                                <outlet property="weiboView" destination="hCK-Zx-Qf9" id="0aB-xk-n5u"/>
+                                            </connections>
+                                        </view>
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitten" translatesAutoresizingMaskIntoConstraints="NO" id="vsj-oN-jyf">
+                                            <rect key="frame" x="5" y="10" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="rSS-Mm-2um"/>
+                                                <constraint firstAttribute="width" constant="50" id="tgQ-eB-xHP"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KITTEN-YANG" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQK-qW-FwU">
+                                            <rect key="frame" x="57" y="10" width="150" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="150" id="3YS-RN-z2a"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="ahg-PD-yVw" firstAttribute="top" secondItem="22v-tu-i6u" secondAttribute="top" constant="35" id="6Eg-Pu-qoY"/>
+                                        <constraint firstItem="QQK-qW-FwU" firstAttribute="leading" secondItem="vsj-oN-jyf" secondAttribute="trailing" constant="2" id="IT7-RS-t3Q"/>
+                                        <constraint firstItem="QQK-qW-FwU" firstAttribute="top" secondItem="22v-tu-i6u" secondAttribute="top" constant="10" id="KZV-Lz-5zs"/>
+                                        <constraint firstItem="ahg-PD-yVw" firstAttribute="top" secondItem="QQK-qW-FwU" secondAttribute="bottom" constant="2" id="O2G-ub-Ccz"/>
+                                        <constraint firstAttribute="trailing" secondItem="ahg-PD-yVw" secondAttribute="trailing" constant="5" id="W53-oo-Y81"/>
+                                        <constraint firstItem="ahg-PD-yVw" firstAttribute="leading" secondItem="22v-tu-i6u" secondAttribute="leading" constant="5" id="bcc-FB-9RP"/>
+                                        <constraint firstAttribute="bottom" secondItem="ahg-PD-yVw" secondAttribute="bottom" constant="10" id="fid-cz-BhB"/>
+                                        <constraint firstItem="vsj-oN-jyf" firstAttribute="top" secondItem="22v-tu-i6u" secondAttribute="top" constant="10" id="rff-Xx-TXE"/>
+                                        <constraint firstItem="vsj-oN-jyf" firstAttribute="leading" secondItem="22v-tu-i6u" secondAttribute="leading" constant="5" id="yIa-Uf-fWx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="avator" destination="vsj-oN-jyf" id="ycZ-c9-yTD"/>
+                                    <outlet property="cellView" destination="ahg-PD-yVw" id="092-Jc-caT"/>
+                                    <outlet property="name" destination="QQK-qW-FwU" id="S6a-pt-lH4"/>
+                                    <segue destination="iC9-I2-GTQ" kind="show" identifier="showDetail" id="ujy-1J-oCJ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xCt-L4-EeA" id="BO5-Ud-kd7"/>
+                            <outlet property="delegate" destination="xCt-L4-EeA" id="fX1-cC-aut"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="B1h-32-Xab"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i36-Ue-dle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2164" y="1557"/>
+        </scene>
+        <!--2 Navigation Controller-->
+        <scene sceneID="YCg-hb-TwY">
+            <objects>
+                <navigationController title="首页" hidesBarsOnSwipe="YES" id="K3y-Dz-DBn" userLabel="2 Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="drop" id="s4Z-B1-qP9" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="kF6-SP-l8S" id="Fsx-f0-OgV"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Mp-Lf-WgG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.97798032407407409" green="0.22008358189822841" blue="0.21250671387035303" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0nI-wp-uZa">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="xCt-L4-EeA" kind="relationship" relationship="rootViewController" id="0Wh-Uz-Ogz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPb-eu-A6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="kF6-SP-l8S" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-2164" y="672"/>
+        </scene>
+        <!--3 Navigaion Controller-->
+        <scene sceneID="aOY-wq-EKc">
+            <objects>
+                <navigationController id="yex-tZ-idp" userLabel="3 Navigaion Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="squre" id="A9T-Jo-Nja" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="qiB-bM-ees" id="4uT-jS-I3a"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VNp-CB-2Rj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KM4-9Z-XS3" kind="relationship" relationship="rootViewController" id="Uld-Te-v4l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fL1-pp-WsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="qiB-bM-ees" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-1382" y="672"/>
+        </scene>
+        <!--广场-->
+        <scene sceneID="U3s-wK-ThV">
+            <objects>
+                <navigationController id="zQE-of-5Ye" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="广场" image="message" id="g2h-9n-7yy" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="zj6-Sy-t1n" id="C2q-eD-zB9"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G31-IE-EOQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sId-hx-whE" kind="relationship" relationship="rootViewController" id="2k6-wK-jkS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1F-zp-nuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="zj6-Sy-t1n" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="694"/>
+        </scene>
+        <!--Square View Controller-->
+        <scene sceneID="qLn-3O-oV3">
+            <objects>
+                <viewController id="sId-hx-whE" customClass="SquareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tBJ-33-Omy"/>
+                        <viewControllerLayoutGuide type="bottom" id="gYJ-7o-Lgg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j47-r1-DuF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bwl-ut-ZxX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-TL-K2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="1619"/>
+        </scene>
+        <!--5 Navigation Controller-->
+        <scene sceneID="bmU-p5-ngx">
+            <objects>
+                <navigationController id="1Xo-R1-dLp" userLabel="5 Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发布" image="setting" id="b5F-hh-0Dd" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="GAT-J3-fbJ" id="KIZ-oM-jFd"/>
+                        </connections>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ju0-uR-yr3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AXg-9T-drz" kind="relationship" relationship="rootViewController" id="Wyh-MD-Lrj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7D-kr-Dtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="GAT-J3-fbJ" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="-628" y="686"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="lXD-O3-Gzh">
+            <objects>
+                <viewController id="AXg-9T-drz" customClass="PostViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9of-EX-DSo"/>
+                        <viewControllerLayoutGuide type="bottom" id="q86-c6-H7g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YuT-3a-Vuk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="m0O-Ca-jO7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kz1-oe-lf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-644" y="1660"/>
+        </scene>
+        <!--UserNavigation-->
+        <scene sceneID="gQh-Qh-DsP">
+            <objects>
+                <navigationController title="UserNavigation" automaticallyAdjustsScrollViewInsets="NO" id="M2C-BA-NuO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="Me" id="BYU-WM-FqO" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="Ndn-j2-E0i" id="rEy-aW-a29"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3PY-cy-3Fy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="hyU-Fe-SFC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dj2-T0-Z2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Ndn-j2-E0i" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="672"/>
+        </scene>
+        <!--MainTabViewController-->
+        <scene sceneID="JDB-aO-pyc">
+            <objects>
+                <tabBarController title="MainTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="VFi-yD-54H" customClass="RAMAnimatedTabBarController" customModule="UnNamedWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="aZc-uK-BkW">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.85882352941176465" green="0.23529411764705882" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="K3y-Dz-DBn" kind="relationship" relationship="viewControllers" id="asH-eW-LFM"/>
+                        <segue destination="yex-tZ-idp" kind="relationship" relationship="viewControllers" id="grE-IP-kvr"/>
+                        <segue destination="1Xo-R1-dLp" kind="relationship" relationship="viewControllers" id="VtX-Vn-2kj"/>
+                        <segue destination="zQE-of-5Ye" kind="relationship" relationship="viewControllers" id="bYc-6h-w8K"/>
+                        <segue destination="M2C-BA-NuO" kind="relationship" relationship="viewControllers" id="Be1-7u-tId"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rKb-6g-qbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498" y="-279"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Me" width="30" height="30"/>
+        <image name="drop" width="24" height="24"/>
+        <image name="kitten" width="250" height="250"/>
+        <image name="message" width="30" height="30"/>
+        <image name="setting" width="30" height="30"/>
+        <image name="squre" width="30" height="30"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+</document>
