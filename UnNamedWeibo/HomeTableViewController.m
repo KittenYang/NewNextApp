@@ -27,11 +27,12 @@
 #import "KYPopInteractiveTransition.h"
 #import "JellyButton.h"
 #import "DetailViewController.h"
+#import "KYGooeyMenu.h"
 //#import "UnNamedWeibo-Swift.h"
 
 
 
-@interface HomeTableViewController ()
+@interface HomeTableViewController ()<menuDidSelectedDelegate>
 
 @property (strong, nonatomic) SKSplashView *splashView;
 @property (nonatomic,copy   ) NSString     *topWeiboId;// 最新一条微博的ID
@@ -129,6 +130,14 @@
     [super viewDidLoad];
     [self twitterSplash];
 
+    //显示KYGooeyMenu
+    KYGooeyMenu *gooeyMenu = [[KYGooeyMenu alloc]initWithOrigin:CGPointMake(CGRectGetMidX(self.view.frame)-50, 500) andDiameter:100.0f andDelegate:self.tabBarController themeColor:[UIColor redColor]];
+    gooeyMenu.menuDelegate = self;
+    gooeyMenu.radius = 100/4;//大圆的1/4
+    gooeyMenu.extraDistance = 20;
+    gooeyMenu.MenuCount = 4;
+    
+    
     self.navigationItem.hidesBackButton = NO;
     self.navigationItem.leftItemsSupplementBackButton = NO;
     self.isNeedScrollBarIndicator = YES;
@@ -187,6 +196,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark -- 彩单选中的代理方法
+-(void)menuDidSelected:(NSInteger)index{
+    NSLog(@"选中第%ld",(long)index);
+}
+
+
 
 #pragma mark -- 定时获取未读微博数
 -(void)fetchToUnread{

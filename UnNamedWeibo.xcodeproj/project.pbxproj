@@ -376,6 +376,8 @@
 		5F8737321A8F2399000CADF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8737311A8F2399000CADF4 /* BaseViewController.m */; };
 		5F8737361A8F23EA000CADF4 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8737351A8F23EA000CADF4 /* BaseTableViewController.m */; };
 		5F8DB5781AA5816700727719 /* KYCuteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DB5771AA5816700727719 /* KYCuteView.m */; };
+		5F9B7F0F1AEB71A300B8D358 /* Cross.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B7F0C1AEB71A300B8D358 /* Cross.m */; };
+		5F9B7F101AEB71A300B8D358 /* KYGooeyMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B7F0E1AEB71A300B8D358 /* KYGooeyMenu.m */; };
 		5FABDD4D1AE7E44800B8A23E /* DetailWeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FABDD4C1AE7E44800B8A23E /* DetailWeiboView.m */; };
 		5FABDD531AE7E49500B8A23E /* XXNibBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FABDD501AE7E49500B8A23E /* XXNibBridge.m */; };
 		5FABDD541AE7E49500B8A23E /* XXNibConvention.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FABDD521AE7E49500B8A23E /* XXNibConvention.m */; };
@@ -1232,6 +1234,10 @@
 		5F8737351A8F23EA000CADF4 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		5F8DB5761AA5816700727719 /* KYCuteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCuteView.h; sourceTree = "<group>"; };
 		5F8DB5771AA5816700727719 /* KYCuteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCuteView.m; sourceTree = "<group>"; };
+		5F9B7F0B1AEB71A300B8D358 /* Cross.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cross.h; sourceTree = "<group>"; };
+		5F9B7F0C1AEB71A300B8D358 /* Cross.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cross.m; sourceTree = "<group>"; };
+		5F9B7F0D1AEB71A300B8D358 /* KYGooeyMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYGooeyMenu.h; sourceTree = "<group>"; };
+		5F9B7F0E1AEB71A300B8D358 /* KYGooeyMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYGooeyMenu.m; sourceTree = "<group>"; };
 		5FABDD4B1AE7E44800B8A23E /* DetailWeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWeiboView.h; sourceTree = "<group>"; };
 		5FABDD4C1AE7E44800B8A23E /* DetailWeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWeiboView.m; sourceTree = "<group>"; };
 		5FABDD4F1AE7E49500B8A23E /* XXNibBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNibBridge.h; sourceTree = "<group>"; };
@@ -2173,6 +2179,7 @@
 		5F87363F1A8C4EF6000CADF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F9B7F111AEB71A800B8D358 /* KYGooeyMenu */,
 				5FABDD4E1AE7E49500B8A23E /* XXNibBridge */,
 				5F3ABC971AE55B080014DA38 /* KYPushTransition */,
 				5F3ABC8D1AE55ABF0014DA38 /* KYSelfSizingPushFixCategory */,
@@ -2378,6 +2385,17 @@
 				5F8DB5771AA5816700727719 /* KYCuteView.m */,
 			);
 			name = KYCuteView;
+			sourceTree = "<group>";
+		};
+		5F9B7F111AEB71A800B8D358 /* KYGooeyMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B7F0B1AEB71A300B8D358 /* Cross.h */,
+				5F9B7F0C1AEB71A300B8D358 /* Cross.m */,
+				5F9B7F0D1AEB71A300B8D358 /* KYGooeyMenu.h */,
+				5F9B7F0E1AEB71A300B8D358 /* KYGooeyMenu.m */,
+			);
+			name = KYGooeyMenu;
 			sourceTree = "<group>";
 		};
 		5FABDD4E1AE7E49500B8A23E /* XXNibBridge */ = {
@@ -3749,6 +3767,7 @@
 				5FABDD531AE7E49500B8A23E /* XXNibBridge.m in Sources */,
 				5F1147D61AB49F90009C75B0 /* DetailViewController.m in Sources */,
 				5F8736841A8CC517000CADF4 /* MessageViewController.m in Sources */,
+				5F9B7F0F1AEB71A300B8D358 /* Cross.m in Sources */,
 				5F8736481A8C4EF7000CADF4 /* UserViewController.m in Sources */,
 				5F7FAD941A923F1400CEF622 /* UserModel.m in Sources */,
 				5F7FAE061A94C90500CEF622 /* RegexKitLite.m in Sources */,
@@ -3756,6 +3775,7 @@
 				5F7FADD81A93840F00CEF622 /* UIView+Extra.m in Sources */,
 				5F8DB5781AA5816700727719 /* KYCuteView.m in Sources */,
 				5F8736781A8C55EC000CADF4 /* RAMAnimatedTabBarController.swift in Sources */,
+				5F9B7F101AEB71A300B8D358 /* KYGooeyMenu.m in Sources */,
 				5F3ABC951AE55AFC0014DA38 /* KYPopTransition.m in Sources */,
 				5F7FADDE1A9385C500CEF622 /* WeiboView.m in Sources */,
 				5FABDD4D1AE7E44800B8A23E /* DetailWeiboView.m in Sources */,
