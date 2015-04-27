@@ -33,7 +33,20 @@
     self.title = @"详细";
     super.timeScroller.hidden =  YES;
     self.isNeedScrollBarIndicator = NO;
+
+//    UIButton *authBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+//    authBtn.frame = CGRectMake(260, 20, 50, 30);
+//    [authBtn setTitle:@"登录" forState:UIControlStateNormal];
+//    [authBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [authBtn addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *authItem =[[UIBarButtonItem alloc]initWithCustomView:authBtn];
+//    self.navigationItem.rightBarButtonItem = authItem;
     
+}
+
+
+-(void)pop{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
