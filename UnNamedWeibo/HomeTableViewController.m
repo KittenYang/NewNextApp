@@ -133,6 +133,10 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置tabbar的delegate为自己
+
+    
     //显示KYGooeyMenu
     gooeyMenu = [[KYGooeyMenu alloc]initWithOrigin:CGPointMake(CGRectGetMidX(self.view.frame)-35, SCREENHEIGHT-60) andDiameter:70.0f andDelegate:self.tabBarController themeColor:[UIColor redColor]];
     gooeyMenu.menuDelegate = self;
@@ -202,6 +206,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 
 #pragma mark -- 彩单选中的代理方法
@@ -379,10 +386,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 //    [self performSegueWithIdentifier:@"showDetail" sender:nil];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     detailVC.model = [self.data objectAtIndex:indexPath.row];
     
 //    [detailVC.detailWeiboView setUpDetailWeibo:[self.data objectAtIndex:indexPath.row]];
 }
+
+
 
 
 

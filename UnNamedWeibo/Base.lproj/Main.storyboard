@@ -47,7 +47,19 @@
                     <view key="view" contentMode="scaleToFill" id="JiL-aR-2VZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaT-rh-fhC">
+                                <rect key="frame" x="283" y="289" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="KaT-rh-fhC" secondAttribute="centerY" id="E4C-ZR-tta"/>
+                            <constraint firstAttribute="centerX" secondItem="KaT-rh-fhC" secondAttribute="centerX" id="gXD-vq-uRe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="W2Y-wZ-vh5"/>
                 </viewController>
@@ -409,7 +421,7 @@
         <scene sceneID="aOY-wq-EKc">
             <objects>
                 <navigationController id="yex-tZ-idp" userLabel="3 Navigaion Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" image="squre" id="A9T-Jo-Nja"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="消息" image="squre" id="A9T-Jo-Nja"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VNp-CB-2Rj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -427,7 +439,7 @@
         <scene sceneID="U3s-wK-ThV">
             <objects>
                 <navigationController id="zQE-of-5Ye" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="广场" image="message" id="g2h-9n-7yy"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="广场" image="message" id="g2h-9n-7yy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G31-IE-EOQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -452,6 +464,14 @@
                     <view key="view" contentMode="scaleToFill" id="j47-r1-DuF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="广场" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoD-zL-wbV">
+                                <rect key="frame" x="279" y="289" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bwl-ut-ZxX"/>
@@ -464,7 +484,7 @@
         <scene sceneID="bmU-p5-ngx">
             <objects>
                 <navigationController id="1Xo-R1-dLp" userLabel="5 Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发布" image="setting" id="b5F-hh-0Dd"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="发布" image="setting" id="b5F-hh-0Dd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ju0-uR-yr3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -489,7 +509,19 @@
                     <view key="view" contentMode="scaleToFill" id="YuT-3a-Vuk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ir7-w6-NQq">
+                                <rect key="frame" x="283" y="290" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Ir7-w6-NQq" secondAttribute="centerY" id="cwY-5K-uwy"/>
+                            <constraint firstAttribute="centerX" secondItem="Ir7-w6-NQq" secondAttribute="centerX" id="xQX-uw-23o"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m0O-Ca-jO7"/>
                 </viewController>
@@ -501,7 +533,7 @@
         <scene sceneID="gQh-Qh-DsP">
             <objects>
                 <navigationController title="UserNavigation" automaticallyAdjustsScrollViewInsets="NO" id="M2C-BA-NuO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="Me" id="BYU-WM-FqO"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="我的" image="Me" id="BYU-WM-FqO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3PY-cy-3Fy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -520,13 +552,19 @@
         <!--MainTabViewController-->
         <scene sceneID="JDB-aO-pyc">
             <objects>
-                <tabBarController title="MainTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="VFi-yD-54H" sceneMemberID="viewController">
+                <tabBarController title="MainTabViewController" automaticallyAdjustsScrollViewInsets="NO" id="VFi-yD-54H" customClass="MainTabViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="aZc-uK-BkW">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.85882352941176465" green="0.23529411764705882" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.85882352939999995" green="0.23529411759999999" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.85098040100000005" green="0.043137256059999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="K3y-Dz-DBn" kind="relationship" relationship="viewControllers" id="asH-eW-LFM"/>

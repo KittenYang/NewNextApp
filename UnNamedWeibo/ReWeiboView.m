@@ -38,7 +38,6 @@ typedef enum ScrollDirection {
     self.reWeiboText.font =[UIFont systemFontOfSize:15.0f];
     
     
-    NSString
 }
 
 //-(void)layoutSubviews{

@@ -44,6 +44,7 @@
     [super viewDidLoad];
     
     self.tableView.scrollsToTop = YES;
+    self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 250;
 
