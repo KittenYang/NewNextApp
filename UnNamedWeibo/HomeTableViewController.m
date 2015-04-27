@@ -55,23 +55,28 @@
     
     //详细微博页面
     DetailViewController *detailVC;
+    
+    //KYGooeyMenu
+    KYGooeyMenu *gooeyMenu;
 }
 
 
 -(void)hideTabBar:(BOOL)flag {
-//    RAMAnimatedTabBarController *atc = (RAMAnimatedTabBarController *)self.tabBarController;
-//    [atc hideRAMAnimatedTabBar:flag];
+
     UITabBar *tabbar = self.tabBarController.tabBar;
     if (flag == YES) {
-        [UIView animateWithDuration:0.7 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+        [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
             tabbar.transform = CGAffineTransformMakeTranslation(0, 64);
-//            tabbar.hidden = YES;
+            gooeyMenu.mainView.transform = CGAffineTransformMakeTranslation(0, 64);
+            self.cuteView.frontView.transform = CGAffineTransformMakeTranslation(0, 64+self.cuteView.frontView.frame.size.height);
         } completion:nil];
     }
     if (flag == NO) {
         [UIView animateWithDuration:0.7 delay:0.0 usingSpringWithDamping:0.6f initialSpringVelocity:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
             tabbar.transform = CGAffineTransformIdentity;
-//            tabbar.hidden = NO;
+            gooeyMenu.mainView.transform = CGAffineTransformIdentity;
+            self.cuteView.frontView.transform = CGAffineTransformIdentity;
+
         } completion:nil];
     }
 }
@@ -128,15 +133,16 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self twitterSplash];
-
     //显示KYGooeyMenu
-    KYGooeyMenu *gooeyMenu = [[KYGooeyMenu alloc]initWithOrigin:CGPointMake(CGRectGetMidX(self.view.frame)-50, 500) andDiameter:100.0f andDelegate:self.tabBarController themeColor:[UIColor redColor]];
+    gooeyMenu = [[KYGooeyMenu alloc]initWithOrigin:CGPointMake(CGRectGetMidX(self.view.frame)-35, SCREENHEIGHT-60) andDiameter:70.0f andDelegate:self.tabBarController themeColor:[UIColor redColor]];
     gooeyMenu.menuDelegate = self;
-    gooeyMenu.radius = 100/4;//大圆的1/4
+    gooeyMenu.radius = 70/4;//大圆的1/4
     gooeyMenu.extraDistance = 20;
     gooeyMenu.MenuCount = 4;
     
+    
+    //添加启动页面
+    [self twitterSplash];
     
     self.navigationItem.hidesBackButton = NO;
     self.navigationItem.leftItemsSupplementBackButton = NO;

@@ -43,6 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.scrollsToTop = YES;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 250;
 
