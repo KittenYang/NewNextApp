@@ -386,16 +386,7 @@
         <scene sceneID="YCg-hb-TwY">
             <objects>
                 <navigationController title="首页" hidesBarsOnSwipe="YES" id="K3y-Dz-DBn" userLabel="2 Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="drop" id="s4Z-B1-qP9" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="kF6-SP-l8S" id="Fsx-f0-OgV"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="首页" image="drop" id="s4Z-B1-qP9"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Mp-Lf-WgG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -411,7 +402,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPb-eu-A6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="kF6-SP-l8S" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-2164" y="672"/>
         </scene>
@@ -419,16 +409,7 @@
         <scene sceneID="aOY-wq-EKc">
             <objects>
                 <navigationController id="yex-tZ-idp" userLabel="3 Navigaion Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" image="squre" id="A9T-Jo-Nja" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="qiB-bM-ees" id="4uT-jS-I3a"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="消息" image="squre" id="A9T-Jo-Nja"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VNp-CB-2Rj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -439,7 +420,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fL1-pp-WsL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="qiB-bM-ees" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-1382" y="672"/>
         </scene>
@@ -447,16 +427,7 @@
         <scene sceneID="U3s-wK-ThV">
             <objects>
                 <navigationController id="zQE-of-5Ye" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="广场" image="message" id="g2h-9n-7yy" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="zj6-Sy-t1n" id="C2q-eD-zB9"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="广场" image="message" id="g2h-9n-7yy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G31-IE-EOQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -467,7 +438,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1F-zp-nuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="zj6-Sy-t1n" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="108" y="694"/>
         </scene>
@@ -494,16 +464,7 @@
         <scene sceneID="bmU-p5-ngx">
             <objects>
                 <navigationController id="1Xo-R1-dLp" userLabel="5 Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发布" image="setting" id="b5F-hh-0Dd" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="GAT-J3-fbJ" id="KIZ-oM-jFd"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="发布" image="setting" id="b5F-hh-0Dd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ju0-uR-yr3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -514,7 +475,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7D-kr-Dtg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="GAT-J3-fbJ" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-628" y="686"/>
         </scene>
@@ -541,16 +501,7 @@
         <scene sceneID="gQh-Qh-DsP">
             <objects>
                 <navigationController title="UserNavigation" automaticallyAdjustsScrollViewInsets="NO" id="M2C-BA-NuO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="Me" id="BYU-WM-FqO" customClass="RAMAnimatedTabBarItem" customModule="UnNamedWeibo" customModuleProvider="target">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                        <connections>
-                            <outlet property="animation" destination="Ndn-j2-E0i" id="rEy-aW-a29"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="我的" image="Me" id="BYU-WM-FqO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3PY-cy-3Fy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -563,7 +514,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dj2-T0-Z2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Ndn-j2-E0i" customClass="RAMBounceAnimation" customModule="UnNamedWeibo" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="920" y="672"/>
         </scene>

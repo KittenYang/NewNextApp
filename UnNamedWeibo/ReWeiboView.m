@@ -37,6 +37,8 @@ typedef enum ScrollDirection {
     self.reWeiboText.customEmojiRegex = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
     self.reWeiboText.font =[UIFont systemFontOfSize:15.0f];
     
+    
+    NSString
 }
 
 //-(void)layoutSubviews{

@@ -362,13 +362,6 @@
 		5F87364D1A8C4EF7000CADF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F87364C1A8C4EF7000CADF4 /* Images.xcassets */; };
 		5F8736501A8C4EF8000CADF4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F87364E1A8C4EF8000CADF4 /* LaunchScreen.xib */; };
 		5F87365C1A8C4EF9000CADF4 /* UnNamedWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F87365B1A8C4EF9000CADF4 /* UnNamedWeiboTests.m */; };
-		5F8736731A8C55EC000CADF4 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736681A8C55EB000CADF4 /* RAMBounceAnimation.swift */; };
-		5F8736741A8C55EC000CADF4 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87366A1A8C55EB000CADF4 /* RAMFrameItemAnimation.swift */; };
-		5F8736751A8C55EC000CADF4 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87366C1A8C55EB000CADF4 /* RAMFumeAnimation.swift */; };
-		5F8736761A8C55EC000CADF4 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F87366E1A8C55EC000CADF4 /* RAMRotationAnimation.swift */; };
-		5F8736771A8C55EC000CADF4 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736701A8C55EC000CADF4 /* RAMTransitionItemAnimation.swift */; };
-		5F8736781A8C55EC000CADF4 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736711A8C55EC000CADF4 /* RAMAnimatedTabBarController.swift */; };
-		5F8736791A8C55EC000CADF4 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736721A8C55EC000CADF4 /* RAMItemAnimationProtocol.swift */; };
 		5F8736841A8CC517000CADF4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736831A8CC517000CADF4 /* MessageViewController.m */; };
 		5F8736881A8CC55A000CADF4 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736871A8CC55A000CADF4 /* SquareViewController.m */; };
 		5F87368C1A8CC5A2000CADF4 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F87368B1A8CC5A2000CADF4 /* PostViewController.m */; };
@@ -1158,7 +1151,6 @@
 		5F7FAD6B1A904CF500CEF622 /* KYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCell.m; sourceTree = "<group>"; };
 		5F7FAD6D1A90DEB600CEF622 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
 		5F7FAD6E1A90DEB600CEF622 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
-		5F7FAD761A90E54400CEF622 /* UnNamedWeibo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UnNamedWeibo-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F7FAD801A923B5900CEF622 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		5F7FAD811A923B5900CEF622 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
 		5F7FAD821A923B5900CEF622 /* WBHttpRequest+WeiboToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboToken.h"; sourceTree = "<group>"; };
@@ -1213,13 +1205,6 @@
 		5F8736551A8C4EF9000CADF4 /* UnNamedWeiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnNamedWeiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F87365A1A8C4EF9000CADF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F87365B1A8C4EF9000CADF4 /* UnNamedWeiboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnNamedWeiboTests.m; sourceTree = "<group>"; };
-		5F8736681A8C55EB000CADF4 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
-		5F87366A1A8C55EB000CADF4 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
-		5F87366C1A8C55EB000CADF4 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
-		5F87366E1A8C55EC000CADF4 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
-		5F8736701A8C55EC000CADF4 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
-		5F8736711A8C55EC000CADF4 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
-		5F8736721A8C55EC000CADF4 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 		5F8736821A8CC517000CADF4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		5F8736831A8CC517000CADF4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		5F8736861A8CC55A000CADF4 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
@@ -2192,7 +2177,6 @@
 				5FDF30DC1AA0AAD0007E6ECA /* VBFJellyView */,
 				5F7FAE481A9794B500CEF622 /* TimeScroller */,
 				5F7FADFE1A94C69300CEF622 /* RegexKitLite */,
-				5F8736651A8C55EB000CADF4 /* RAMAnimatedTabBarController */,
 				5F7FAD7F1A923B5900CEF622 /* libWeiboSDK */,
 				5F7FADD61A93840F00CEF622 /* UIView+Extra.h */,
 				5F7FADD71A93840F00CEF622 /* UIView+Extra.m */,
@@ -2220,69 +2204,6 @@
 				5F87365A1A8C4EF9000CADF4 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F8736651A8C55EB000CADF4 /* RAMAnimatedTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				5F8736661A8C55EB000CADF4 /* Animations */,
-				5F8736711A8C55EC000CADF4 /* RAMAnimatedTabBarController.swift */,
-				5F7FAD761A90E54400CEF622 /* UnNamedWeibo-Bridging-Header.h */,
-				5F8736721A8C55EC000CADF4 /* RAMItemAnimationProtocol.swift */,
-			);
-			path = RAMAnimatedTabBarController;
-			sourceTree = "<group>";
-		};
-		5F8736661A8C55EB000CADF4 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				5F8736671A8C55EB000CADF4 /* BounceAnimation */,
-				5F8736691A8C55EB000CADF4 /* FrameAnimation */,
-				5F87366B1A8C55EB000CADF4 /* FumeAnimation */,
-				5F87366D1A8C55EB000CADF4 /* RotationAnimation */,
-				5F87366F1A8C55EC000CADF4 /* TransitionAniamtions */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		5F8736671A8C55EB000CADF4 /* BounceAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				5F8736681A8C55EB000CADF4 /* RAMBounceAnimation.swift */,
-			);
-			path = BounceAnimation;
-			sourceTree = "<group>";
-		};
-		5F8736691A8C55EB000CADF4 /* FrameAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				5F87366A1A8C55EB000CADF4 /* RAMFrameItemAnimation.swift */,
-			);
-			path = FrameAnimation;
-			sourceTree = "<group>";
-		};
-		5F87366B1A8C55EB000CADF4 /* FumeAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				5F87366C1A8C55EB000CADF4 /* RAMFumeAnimation.swift */,
-			);
-			path = FumeAnimation;
-			sourceTree = "<group>";
-		};
-		5F87366D1A8C55EB000CADF4 /* RotationAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				5F87366E1A8C55EC000CADF4 /* RAMRotationAnimation.swift */,
-			);
-			path = RotationAnimation;
-			sourceTree = "<group>";
-		};
-		5F87366F1A8C55EC000CADF4 /* TransitionAniamtions */ = {
-			isa = PBXGroup;
-			children = (
-				5F8736701A8C55EC000CADF4 /* RAMTransitionItemAnimation.swift */,
-			);
-			path = TransitionAniamtions;
 			sourceTree = "<group>";
 		};
 		5F8736801A8CC4B8000CADF4 /* UserViewController */ = {
@@ -3774,7 +3695,6 @@
 				5F87368C1A8CC5A2000CADF4 /* PostViewController.m in Sources */,
 				5F7FADD81A93840F00CEF622 /* UIView+Extra.m in Sources */,
 				5F8DB5781AA5816700727719 /* KYCuteView.m in Sources */,
-				5F8736781A8C55EC000CADF4 /* RAMAnimatedTabBarController.swift in Sources */,
 				5F9B7F101AEB71A300B8D358 /* KYGooeyMenu.m in Sources */,
 				5F3ABC951AE55AFC0014DA38 /* KYPopTransition.m in Sources */,
 				5F7FADDE1A9385C500CEF622 /* WeiboView.m in Sources */,
@@ -3784,15 +3704,10 @@
 				5F7FAE471A9794AE00CEF622 /* ACTimeScroller.m in Sources */,
 				5F28895F1AA8BD1700E64BAD /* ReWeiboImgCollectionViewCell.m in Sources */,
 				5F8736451A8C4EF7000CADF4 /* AppDelegate.m in Sources */,
-				5F8736771A8C55EC000CADF4 /* RAMTransitionItemAnimation.swift in Sources */,
 				5F7FAE901A9B42B800CEF622 /* KYLoadingHUD.m in Sources */,
-				5F8736791A8C55EC000CADF4 /* RAMItemAnimationProtocol.swift in Sources */,
 				5F7FAD6C1A904CF500CEF622 /* KYCell.m in Sources */,
 				5F7FAE9E1A9C409F00CEF622 /* JellyView.m in Sources */,
 				5F8736421A8C4EF7000CADF4 /* main.m in Sources */,
-				5F8736761A8C55EC000CADF4 /* RAMRotationAnimation.swift in Sources */,
-				5F8736741A8C55EC000CADF4 /* RAMFrameItemAnimation.swift in Sources */,
-				5F8736751A8C55EC000CADF4 /* RAMFumeAnimation.swift in Sources */,
 				5FABDD541AE7E49500B8A23E /* XXNibConvention.m in Sources */,
 				5F3ABC8C1AE51DE40014DA38 /* UITableViewController+KYSelfSizingPushFix.m in Sources */,
 				5F8736881A8CC55A000CADF4 /* SquareViewController.m in Sources */,
@@ -3800,7 +3715,6 @@
 				5FDF30DF1AA0AAFA007E6ECA /* JellyButton.m in Sources */,
 				5FDF30DB1AA0AAC8007E6ECA /* VBFJellyView.m in Sources */,
 				5F7FADDB1A9385B900CEF622 /* CellView.m in Sources */,
-				5F8736731A8C55EC000CADF4 /* RAMBounceAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3950,7 +3864,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnNamedWeibo/RAMAnimatedTabBarController/UnNamedWeibo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3980,7 +3894,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/UnNamedWeibo/RAMAnimatedTabBarController/UnNamedWeibo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
