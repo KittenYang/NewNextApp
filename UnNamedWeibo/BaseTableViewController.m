@@ -14,7 +14,6 @@
 #import "BaseTableViewController.h"
 #import "KYCell.h"
 #import "Utils.h"
-#import "ACTimeScroller.h"
 #import "JellyView.h"
 
 
@@ -27,10 +26,7 @@
 @end
 
 
-@implementation BaseTableViewController{
-
-    ACTimeScroller *_timeScroller;    
-}
+@implementation BaseTableViewController
 
 -(void)viewWillAppear:(BOOL)animated{
     //时间滚动条

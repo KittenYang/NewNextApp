@@ -30,8 +30,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"详细";
+    super.timeScroller.hidden =  YES;
     self.isNeedScrollBarIndicator = NO;
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {

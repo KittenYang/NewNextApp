@@ -15,8 +15,13 @@
 
 @implementation UserViewController
 
+-(void)awakeFromNib{
+    self.title = @"我的";
+}
+
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
     
 

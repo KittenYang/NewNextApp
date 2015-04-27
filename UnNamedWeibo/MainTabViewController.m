@@ -26,15 +26,25 @@
     
 }
 
+
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     
     NSLog(@"==========================selectedViewController:%ld",lastVCIndex);
     NSLog(@"=========================%ld",item.tag);
     
+    
+    UINavigationController *nav = [self.viewControllers objectAtIndex:0];
+    HomeTableViewController *homeVC = [nav.viewControllers objectAtIndex:0];
+    
+//    CGFloat oldTableViewHeight = homeVC.tableView.contentSize.height;
+//    CGFloat newTableViewHeight = homeVC.tableView.contentSize.height;
+//    homeVC.tableView.contentOffset = CGPointMake(0, newTableViewHeight - oldTableViewHeight);
+//    [homeVC.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:updateCount inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+
+    
     if (lastVCIndex == 0 && item.tag == 0) {
-        UINavigationController *nav = [self.viewControllers objectAtIndex:0];
-        HomeTableViewController *homeVC = [nav.viewControllers objectAtIndex:0];
+        
         [homeVC.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:  YES];
         NSLog(@"========================YES=========================");
     }

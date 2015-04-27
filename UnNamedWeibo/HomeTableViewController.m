@@ -120,6 +120,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(prepareToLoadWeibo) name:kWeiboAuthSuccessNotification object:nil];
+    self.timeScroller.hidden = NO;
     
 }
 
@@ -134,7 +135,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //设置tabbar的delegate为自己
+    self.title = @"首页";
 
     
     //显示KYGooeyMenu
@@ -570,7 +571,7 @@
         // 刷新后位置保持在原地
 //        CGFloat newTableViewHeight = self.tableView.contentSize.height;
 //        self.tableView.contentOffset = CGPointMake(0, newTableViewHeight - oldTableViewHeight);
-        
+//        
 //        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:updateCount inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
         
     }
@@ -591,10 +592,10 @@
         
         if (self.cuteView == nil) {
 
-            self.cuteView = [[KYCuteView alloc]initWithPoint:CGPointMake([self centerForTabBarItemAtIndex:0].x - 35/2,[[UIScreen mainScreen]bounds].size.height - CGRectGetHeight(self.tabBarController.tabBar.frame)- 35*2/3) superView:self.tabBarController.view];
+            self.cuteView = [[KYCuteView alloc]initWithPoint:CGPointMake([self centerForTabBarItemAtIndex:0].x - 25/2,[[UIScreen mainScreen]bounds].size.height - CGRectGetHeight(self.tabBarController.tabBar.frame)- 25*1/3) superView:self.tabBarController.view];
     
             self.cuteView.bubbleColor = BubbleColor;
-            self.cuteView.bubbleWidth = 35;
+            self.cuteView.bubbleWidth = 25;
             self.cuteView.viscosity  = 10;
             [self.cuteView setUp];
             [self.cuteView addGesture];
@@ -606,9 +607,11 @@
         if (n > 0){
             if (n > 50) {
                 self.cuteView.frontView.hidden = NO;
-                self.cuteView.bubbleLabel.text  = @"...";
+                self.cuteView.bubbleLabel.font = [UIFont systemFontOfSize:9.0f];
+                self.cuteView.bubbleLabel.text  = @"50+";
             }else{
                 self.cuteView.frontView.hidden = NO;
+                self.cuteView.bubbleLabel.font = [UIFont systemFontOfSize:9.0f];
                 self.cuteView.bubbleLabel.text  =[NSString stringWithFormat:@"%d",n];
             }
         }

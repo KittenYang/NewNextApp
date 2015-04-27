@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WeiboSDK.h"
+#import "ACTimeScroller.h"
 #import "CONST.h"
 
 @protocol loadMoreDelegate <NSObject>
@@ -29,6 +30,7 @@
 @property (strong, nonatomic) NSMutableArray   *afterRemovedshowIndexes;//保存已显示的cell的indexpath
 @property (assign,nonatomic ) BOOL             isFirstTime;
 @property (nonatomic,assign) BOOL  isNeedScrollBarIndicator;
+@property (nonatomic,strong) ACTimeScroller *timeScroller;  
 
 -(void)backToTop;//停止刷新，回到顶部
 @end

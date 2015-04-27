@@ -8,7 +8,7 @@
         <!--UserViewController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" userLabel="UserViewController" customClass="UserViewController" sceneMemberID="viewController">
+                <viewController title="我的" id="vXZ-lx-hvc" userLabel="UserViewController" customClass="UserViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -39,7 +39,7 @@
         <!--消息-->
         <scene sceneID="rDt-6t-S3P">
             <objects>
-                <viewController id="KM4-9Z-XS3" userLabel="消息" customClass="MessageViewController" sceneMemberID="viewController">
+                <viewController title="消息" id="KM4-9Z-XS3" userLabel="消息" customClass="MessageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BdU-vF-bHX"/>
                         <viewControllerLayoutGuide type="bottom" id="2pp-bv-DvW"/>
@@ -70,7 +70,7 @@
         <!--Detail Table View Controller-->
         <scene sceneID="rvL-rd-Q0k">
             <objects>
-                <tableViewController id="iC9-I2-GTQ" userLabel="Detail Table View Controller" customClass="DetailViewController" sceneMemberID="viewController">
+                <tableViewController title="详细" id="iC9-I2-GTQ" userLabel="Detail Table View Controller" customClass="DetailViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="Aff-J5-MD3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -398,12 +398,16 @@
         <scene sceneID="YCg-hb-TwY">
             <objects>
                 <navigationController title="首页" hidesBarsOnSwipe="YES" id="K3y-Dz-DBn" userLabel="2 Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="drop" id="s4Z-B1-qP9"/>
+                    <tabBarItem key="tabBarItem" title="" image="drop" id="s4Z-B1-qP9"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Mp-Lf-WgG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.97798032407407409" green="0.22008358189822841" blue="0.21250671387035303" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.97798032410000002" green="0.22008358189999999" blue="0.2125067139" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0nI-wp-uZa">
                         <autoresizingMask key="autoresizingMask"/>
@@ -421,7 +425,7 @@
         <scene sceneID="aOY-wq-EKc">
             <objects>
                 <navigationController id="yex-tZ-idp" userLabel="3 Navigaion Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="消息" image="squre" id="A9T-Jo-Nja"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="squre" id="A9T-Jo-Nja"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VNp-CB-2Rj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -435,11 +439,11 @@
             </objects>
             <point key="canvasLocation" x="-1382" y="672"/>
         </scene>
-        <!--广场-->
+        <!--Navigation Controller-->
         <scene sceneID="U3s-wK-ThV">
             <objects>
                 <navigationController id="zQE-of-5Ye" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="广场" image="message" id="g2h-9n-7yy"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="" image="message" id="g2h-9n-7yy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G31-IE-EOQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -453,10 +457,10 @@
             </objects>
             <point key="canvasLocation" x="108" y="694"/>
         </scene>
-        <!--Square View Controller-->
+        <!--广场-->
         <scene sceneID="qLn-3O-oV3">
             <objects>
-                <viewController id="sId-hx-whE" customClass="SquareViewController" sceneMemberID="viewController">
+                <viewController title="广场" id="sId-hx-whE" customClass="SquareViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tBJ-33-Omy"/>
                         <viewControllerLayoutGuide type="bottom" id="gYJ-7o-Lgg"/>
@@ -484,7 +488,7 @@
         <scene sceneID="bmU-p5-ngx">
             <objects>
                 <navigationController id="1Xo-R1-dLp" userLabel="5 Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="发布" image="setting" id="b5F-hh-0Dd"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="setting" id="b5F-hh-0Dd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ju0-uR-yr3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -498,10 +502,10 @@
             </objects>
             <point key="canvasLocation" x="-628" y="686"/>
         </scene>
-        <!--Post View Controller-->
+        <!--发布-->
         <scene sceneID="lXD-O3-Gzh">
             <objects>
-                <viewController id="AXg-9T-drz" customClass="PostViewController" sceneMemberID="viewController">
+                <viewController title="发布" id="AXg-9T-drz" customClass="PostViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9of-EX-DSo"/>
                         <viewControllerLayoutGuide type="bottom" id="q86-c6-H7g"/>
@@ -533,7 +537,7 @@
         <scene sceneID="gQh-Qh-DsP">
             <objects>
                 <navigationController title="UserNavigation" automaticallyAdjustsScrollViewInsets="NO" id="M2C-BA-NuO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="4" title="我的" image="Me" id="BYU-WM-FqO"/>
+                    <tabBarItem key="tabBarItem" tag="4" title="" image="Me" id="BYU-WM-FqO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3PY-cy-3Fy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

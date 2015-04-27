@@ -14,7 +14,12 @@
 
 @implementation PostViewController
 
+-(void)awakeFromNib{
+    self.title = @"发布";
+}
+
 - (void)viewDidLoad {
+
     [super viewDidLoad];
     
 }

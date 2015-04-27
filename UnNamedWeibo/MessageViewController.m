@@ -14,6 +14,10 @@
 
 @implementation MessageViewController
 
+-(void)awakeFromNib{
+    self.title = @"消息";
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
