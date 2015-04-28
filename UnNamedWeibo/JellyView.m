@@ -88,7 +88,7 @@
             snap = [[ UISnapBehavior alloc]initWithItem:_ballView snapToPoint:CGPointMake(self.userFrame.size.width / 2, self.userFrame.size.height - (90+64.5)/2)];
             [animator addBehavior:snap];
             
-//            [self startLoading];
+            [self startLoading];
         }
 
         fillColor = [UIColor redColor];
@@ -114,23 +114,30 @@
         [animator addBehavior:coll];
     }
     
-//    CGContextRef context = UIGraphicsGetCurrentContext();
-//    CGContextAddPath(context, path.CGPath);
-//    [fillColor setFill];
-//    CGContextFillPath(context);
+
     
 }
 
+
 - (void)startLoading
 {
-    CGAffineTransform endAngle = CGAffineTransformMakeRotation(angle * (M_PI / 180.0f));
+//    CGAffineTransform endAngle = CGAffineTransformMakeRotation(angle * (M_PI / 180.0f));
+//    
+//    [UIView animateWithDuration:0.01 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+//        _ballView.transform = endAngle;
+//    } completion:^(BOOL finished) {
+//        angle += 10;
+//        [self startLoading];
+//    }];
     
-    [UIView animateWithDuration:0.01 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        _ballView.transform = endAngle;
-    } completion:^(BOOL finished) {
-        angle += 10;
-        [self startLoading];
-    }];
+    
+    CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = @(M_PI * 2.0);
+    rotationAnimation.duration = 0.9f;
+    rotationAnimation.autoreverses = NO;
+    rotationAnimation.repeatCount = HUGE_VALF;
+    rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    [self.ballView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     
 }
 

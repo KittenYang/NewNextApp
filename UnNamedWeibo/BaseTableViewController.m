@@ -235,7 +235,7 @@
 
 //跳到顶部复原的方法
 -(void)backToTop{
-    
+    [self.jellyView.layer removeAnimationForKey:@"rotationAnimation"];
     [UIView animateWithDuration:0.3 animations:^{
         self.tableView.contentInset = UIEdgeInsetsMake(64.5, 0, 0, 0);
     } completion:^(BOOL finished) {
