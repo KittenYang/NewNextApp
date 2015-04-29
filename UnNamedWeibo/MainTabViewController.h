@@ -11,4 +11,6 @@
 
 @interface MainTabViewController : UITabBarController
 
+@property(nonatomic,assign)BOOL isTop;
+
 @end

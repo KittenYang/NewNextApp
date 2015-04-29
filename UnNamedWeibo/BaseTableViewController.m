@@ -15,6 +15,7 @@
 #import "KYCell.h"
 #import "Utils.h"
 #import "JellyView.h"
+#import "MainTabViewController.h"
 
 
 @interface BaseTableViewController ()<ACTimeScrollerDelegate>
@@ -116,7 +117,6 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView willDisplayCell:(KYCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    
 //    [cell.cellView.weiboView.reWeiboView.reWeiboImageCollectionView reloadData];
 //    [cell.cellView.weiboView.weiboImageCollectionView reloadData];
     
@@ -153,11 +153,15 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [_timeScroller scrollViewWillBeginDragging];
+    MainTabViewController *mainTabVC =  (MainTabViewController *)self.tabBarController;
+    mainTabVC.isTop = NO;
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-
+    
+    
     [_timeScroller scrollViewDidScroll];
     if (scrollView.contentOffset.y > -64.5) {
         if (self.jellyView.isLoading == NO) {

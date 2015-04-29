@@ -16,6 +16,7 @@
 
 @implementation MainTabViewController{
     NSInteger lastVCIndex;
+    CGFloat lastContentOffsetY;
 }
 
 
@@ -44,8 +45,19 @@
 
     
     if (lastVCIndex == 0 && item.tag == 0) {
-        
-        [homeVC.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:  YES];
+        if (self.isTop == NO) {
+            lastContentOffsetY = homeVC.tableView.contentOffset.y;
+        }
+    
+        if (lastContentOffsetY != homeVC.tableView.contentOffset.y) {
+            //返回lastContentOffsetY
+            [homeVC.tableView setContentOffset:CGPointMake(0, lastContentOffsetY) animated:YES];
+
+        }else{
+            //返回顶部
+            [homeVC.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:  YES];
+            self.isTop = YES;
+        }
         NSLog(@"========================YES=========================");
     }
     lastVCIndex = item.tag;
