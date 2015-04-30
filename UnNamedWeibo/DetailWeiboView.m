@@ -232,17 +232,17 @@
 
     //转发视图
     if (self.model_detail.retWeibo) {
-        retWeiboDetailView = [[UIView alloc]init];
-        retWeiboDetailView.origin = CGPointMake(20, self.detail_text.bottom);
-        retWeiboDetailView.bounds = CGRectMake(0, 0, SCREENWIDTH-40, 250);//初始先给一个默认高度250
+        retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(20, 70 + size.height, SCREENWIDTH-40, 250)];
+//        retWeiboDetailView.origin = CGPointMake(20, self.detail_text.bottom);
+//        retWeiboDetailView.bounds = CGRectMake(0, 0, SCREENWIDTH-40, 250);//初始先给一个默认高度250
         retWeiboDetailView.backgroundColor = [UIColor grayColor];
         [self addSubview:retWeiboDetailView];
         
         MLEmojiLabel *retDetail_text = [[MLEmojiLabel alloc]initWithFrame:CGRectZero];
         retDetail_text.text = self.model_detail.retWeibo.text;
-        CGSize size = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
+        CGSize retTextSize = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
         retDetail_text.origin = CGPointMake(10, 5);
-        retDetail_text.bounds = CGRectMake(0, 0, size.width, size.height);
+        retDetail_text.bounds = CGRectMake(0, 0, retTextSize.width, retTextSize.height);
         retDetail_text.lineBreakMode = NSLineBreakByWordWrapping;
         retDetail_text.numberOfLines = 0;
         
