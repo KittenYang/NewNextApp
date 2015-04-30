@@ -233,7 +233,7 @@
 
     //转发视图
     if (self.model_detail.retWeibo) {
-        retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(20, 70+size.height, SCREENWIDTH-40, 250)];
+        retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(5, 70+size.height, SCREENWIDTH-10, 250)];
         retWeiboDetailView.backgroundColor = [UIColor colorWithRed:240.0/250.0 green:240.0/250.0 blue:240.0/250.0 alpha:1];
         [self addSubview:retWeiboDetailView];
     
@@ -255,7 +255,7 @@
         retDetail_text.font =[UIFont systemFontOfSize:15.0f];
 
         
-        CGSize retTextSize = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
+        CGSize retTextSize = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 30, MAXFLOAT)];
         retDetail_text.frame = CGRectMake(10, 5, retTextSize.width, retTextSize.height);
         
         [retWeiboDetailView addSubview:retDetail_text];
@@ -280,7 +280,7 @@
             [retWeiboDetailView addSubview:reWeibo_detail_imgs];
         }
         
-        retWeiboDetailView.frame = CGRectMake(20, 70+size.height, SCREENWIDTH-40, self.model_detail.retWeibo.pic_urls.count>0 ? 5+retTextSize.height+130 : 5+retTextSize.height);
+        retWeiboDetailView.frame = CGRectMake(5, 70+size.height, SCREENWIDTH-10, self.model_detail.retWeibo.pic_urls.count>0 ? 5+retTextSize.height+130 : 5+retTextSize.height);
         
     }
     
