@@ -241,8 +241,8 @@
         MLEmojiLabel *retDetail_text = [[MLEmojiLabel alloc]initWithFrame:CGRectZero];
         retDetail_text.text = self.model_detail.retWeibo.text;
         CGSize retTextSize = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
-        retDetail_text.origin = CGPointMake(10, 5);
-        retDetail_text.bounds = CGRectMake(0, 0, retTextSize.width, retTextSize.height);
+
+        retDetail_text.frame = CGRectMake(10, 5, retTextSize.width, retTextSize.height);
         retDetail_text.lineBreakMode = NSLineBreakByWordWrapping;
         retDetail_text.numberOfLines = 0;
         
@@ -259,7 +259,7 @@
             flowLayout.minimumLineSpacing = 10;
             
             reWeibo_detail_imgs = [[UICollectionView alloc]initWithFrame:CGRectMake(0,retDetail_text.bottom, SCREENWIDTH, 130)collectionViewLayout:flowLayout];
-            reWeibo_detail_imgs.backgroundColor = [UIColor whiteColor];
+            reWeibo_detail_imgs.backgroundColor = [UIColor clearColor];
             [reWeibo_detail_imgs registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"re_detail_Img_Cell"];
             reWeibo_detail_imgs.showsHorizontalScrollIndicator = NO;
             reWeibo_detail_imgs.delegate = self;

@@ -20,9 +20,9 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KITTEN-YANG" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuO-dr-xik">
-                    <rect key="frame" x="63" y="20" width="150" height="17"/>
+                    <rect key="frame" x="63" y="20" width="250" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="vfG-3A-62C"/>
+                        <constraint firstAttribute="width" constant="250" id="vfG-3A-62C"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
