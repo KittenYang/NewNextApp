@@ -161,6 +161,7 @@
             NSDictionary *imgDICS = self.model_detail.retWeibo.pic_urls[indexPath.item];
             NSString *imgUrl = [imgDICS objectForKey:@"thumbnail_pic"];
             NSURL *photoUrl = [NSURL URLWithString:imgUrl];
+
             //            if ([imgUrl hasSuffix:@".gif"]) {
             //
             //                cell.gifLabel.hidden = NO;
@@ -169,7 +170,7 @@
             //            }
             
             [cellImage sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"placeholderImg_gray"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-                //                NSLog(@"图片下载进度 = %f", (float)receivedSize/(float)expectedSize );
+                //      NSLog(@"图片下载进度 = %f", (float)receivedSize/(float)expectedSize );
             } completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                 if (error) {
                     NSLog(@"ERROR: %@", error);
@@ -223,26 +224,27 @@
     
     //微博正文
     self.detail_text.text = self.model_detail.text;
+    self.detail_text.backgroundColor = [UIColor redColor];
+    self.detail_text.lineBreakMode = NSLineBreakByWordWrapping;
+    self.detail_text.numberOfLines = 0;
     CGSize size = [self.detail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 40, MAXFLOAT)];
     self.detail_text.bounds = CGRectMake(0, 0, size.width, size.height);
     self.detail_text_height.constant = size.height;
-    self.detail_text.lineBreakMode = NSLineBreakByWordWrapping;
-    self.detail_text.numberOfLines = 0;
     
 
     //转发视图
     if (self.model_detail.retWeibo) {
-        retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(20, self.detail_text.bottom, SCREENWIDTH-40, 250)];
+        retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(20, 70+size.height, SCREENWIDTH-40, 250)];
         retWeiboDetailView.backgroundColor = [UIColor grayColor];
         [self addSubview:retWeiboDetailView];
         
         MLEmojiLabel *retDetail_text = [[MLEmojiLabel alloc]initWithFrame:CGRectZero];
         retDetail_text.text = self.model_detail.retWeibo.text;
+        retDetail_text.lineBreakMode = NSLineBreakByWordWrapping;
+        retDetail_text.numberOfLines = 0;
         CGSize retTextSize = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
 
         retDetail_text.frame = CGRectMake(10, 5, retTextSize.width, retTextSize.height);
-        retDetail_text.lineBreakMode = NSLineBreakByWordWrapping;
-        retDetail_text.numberOfLines = 0;
         
         [retWeiboDetailView addSubview:retDetail_text];
         
@@ -256,7 +258,7 @@
             flowLayout.minimumInteritemSpacing = 10;
             flowLayout.minimumLineSpacing = 10;
             
-            reWeibo_detail_imgs = [[UICollectionView alloc]initWithFrame:CGRectMake(0,retDetail_text.bottom, retDetail_text.width, 130)collectionViewLayout:flowLayout];
+            reWeibo_detail_imgs = [[UICollectionView alloc]initWithFrame:CGRectMake(0,retDetail_text.bottom, retWeiboDetailView.width, 130)collectionViewLayout:flowLayout];
             reWeibo_detail_imgs.backgroundColor = [UIColor clearColor];
             [reWeibo_detail_imgs registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"re_detail_Img_Cell"];
             reWeibo_detail_imgs.showsHorizontalScrollIndicator = NO;
@@ -266,7 +268,8 @@
             [retWeiboDetailView addSubview:reWeibo_detail_imgs];
         }
         
-        retWeiboDetailView.bounds = CGRectMake(0, 0, SCREENWIDTH-40, self.model_detail.retWeibo.pic_urls.count>0 ? 5+retDetail_text.height+130 : 5+retDetail_text.height);
+        retWeiboDetailView.frame = CGRectMake(20, 70+size.height, SCREENWIDTH-40, self.model_detail.retWeibo.pic_urls.count>0 ? 5+retTextSize.height+130 : 5+retTextSize.height);
+        
     }
     
     //微博图片
