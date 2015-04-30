@@ -20,6 +20,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     self.detailWeiboView = [[[NSBundle mainBundle]loadNibNamed:@"DetailWeiboView" owner:self options:nil]firstObject];
+    [self.showIndexes removeAllObjects];
     [self.detailWeiboView setUpDetailWeibo:self.model];
 //    self.detailWeiboView.frame = CGRectMake(0, 0,SCREENWIDTH , 0);
 //    self.detailWeiboView.height = 200;
@@ -73,6 +74,33 @@
     return 1;
 }
 
+#pragma mark -- UITableView Delegate
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSNumber *row = [NSNumber numberWithInteger:indexPath.row];
+    //cell进入动画：
+    if (![self.showIndexes containsObject:row]) {
+        [self.showIndexes addObject:row];
+        
+        CGPoint offsetPositioning = CGPointMake(0, 150);
+        CATransform3D transform = CATransform3DIdentity;
+        transform = CATransform3DTranslate(transform, offsetPositioning.x, offsetPositioning.y , 0.0);
+        cell.layer.transform = transform;
+        
+//        KYCell *kycell_ = (KYCell *)cell;
+//        kycell_.avator.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1);
+//        kycell_.avator.layer.transform = CATransform3DRotate(kycell_.avator.layer.transform, -180 * (M_PI / 180), 0, 0, 1);
+        
+        [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.6f initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            
+//            kycell_.avator.layer.transform = CATransform3DIdentity;
+            cell.layer.transform = CATransform3DIdentity;
+            
+        } completion:nil];
+    }
+
+    
+}
 
 
 @end
