@@ -232,9 +232,7 @@
 
     //转发视图
     if (self.model_detail.retWeibo) {
-        retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(20, 70 + size.height, SCREENWIDTH-40, 250)];
-//        retWeiboDetailView.origin = CGPointMake(20, self.detail_text.bottom);
-//        retWeiboDetailView.bounds = CGRectMake(0, 0, SCREENWIDTH-40, 250);//初始先给一个默认高度250
+        retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(20, self.detail_text.bottom, SCREENWIDTH-40, 250)];
         retWeiboDetailView.backgroundColor = [UIColor grayColor];
         [self addSubview:retWeiboDetailView];
         
@@ -253,12 +251,12 @@
          
             UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
             flowLayout.itemSize  = CGSizeMake(120, 120);
-            flowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
+            flowLayout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
             flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
             flowLayout.minimumInteritemSpacing = 10;
             flowLayout.minimumLineSpacing = 10;
             
-            reWeibo_detail_imgs = [[UICollectionView alloc]initWithFrame:CGRectMake(0,retDetail_text.bottom, SCREENWIDTH, 130)collectionViewLayout:flowLayout];
+            reWeibo_detail_imgs = [[UICollectionView alloc]initWithFrame:CGRectMake(0,retDetail_text.bottom, retDetail_text.width, 130)collectionViewLayout:flowLayout];
             reWeibo_detail_imgs.backgroundColor = [UIColor clearColor];
             [reWeibo_detail_imgs registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"re_detail_Img_Cell"];
             reWeibo_detail_imgs.showsHorizontalScrollIndicator = NO;
