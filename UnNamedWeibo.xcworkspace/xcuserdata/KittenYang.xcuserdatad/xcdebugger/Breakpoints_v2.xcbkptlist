@@ -404,11 +404,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UnNamedWeibo/DetailWeiboView.m"
-            timestampString = "451425138.124337"
+            timestampString = "451991462.717373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "-setUpDetailWeibo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -420,11 +420,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UnNamedWeibo/DetailWeiboView.m"
-            timestampString = "451425080.405733"
+            timestampString = "451991462.717373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "-setUpDetailWeibo:"
             landmarkType = "5">
          </BreakpointContent>

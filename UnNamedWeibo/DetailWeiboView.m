@@ -17,7 +17,9 @@
 
 
 @end
-@implementation DetailWeiboView
+@implementation DetailWeiboView{
+    UIView *retWeiboDetailView;
+}
 
 -(void)awakeFromNib{
     
@@ -76,8 +78,11 @@
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    
-    return [self.model_detail.pic_urls count];
+    if (self.model_detail.retWeibo.pic_urls.count > 0) {
+        return [self.model_detail.retWeibo.pic_urls count];
+    }else{
+        return [self.model_detail.pic_urls count];
+    }
     
 }
 
@@ -85,7 +90,8 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     
-    if (self.model_detail.pic_urls > 0) {
+    //非转发微博，带图片
+    if (self.model_detail.pic_urls.count > 0) {
         
         UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"detail_Img_Cell" forIndexPath:indexPath];
         UIImageView *cellImage = [[UIImageView alloc]initWithFrame:cell.bounds];
@@ -130,8 +136,52 @@
         }
         return cell;
         
-    }else{
+    }else if(self.model_detail.retWeibo.pic_urls.count > 0){
+        //转发微博，带图片
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"re_detail_Img_Cell" forIndexPath:indexPath];
+        UIImageView *cellImage = [[UIImageView alloc]initWithFrame:cell.bounds];
+        cellImage.contentMode = UIViewContentModeScaleAspectFill;
+        cellImage.clipsToBounds = YES;
+        [cell.contentView addSubview:cellImage];
         
+        if (indexPath.row < self.model_detail.retWeibo.pic_urls.count) {
+            
+            NSMutableArray *bmiddle_pic_urls = [NSMutableArray arrayWithCapacity:self.model_detail.retWeibo.pic_urls.count];
+            for (NSInteger i = 0; i < self.model_detail.retWeibo.pic_urls.count; i++) {
+                NSString *thumbnailImageUrl = [self.model_detail.retWeibo.pic_urls[i] objectForKey:@"thumbnail_pic"];
+                if (![thumbnailImageUrl hasSuffix:@".gif"]) {
+                    thumbnailImageUrl = [thumbnailImageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+                }
+                
+                NSDictionary *imgdics = [NSDictionary dictionaryWithObjectsAndKeys:thumbnailImageUrl,@"thumbnail_pic", nil];
+                [bmiddle_pic_urls addObject:imgdics];
+            }
+            self.model_detail.retWeibo.pic_urls = bmiddle_pic_urls;
+            
+            NSDictionary *imgDICS = self.model_detail.retWeibo.pic_urls[indexPath.item];
+            NSString *imgUrl = [imgDICS objectForKey:@"thumbnail_pic"];
+            NSURL *photoUrl = [NSURL URLWithString:imgUrl];
+            //            if ([imgUrl hasSuffix:@".gif"]) {
+            //
+            //                cell.gifLabel.hidden = NO;
+            //            }else{
+            //                cell.gifLabel.hidden = YES;
+            //            }
+            
+            [cellImage sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"placeholderImg_gray"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                //                NSLog(@"图片下载进度 = %f", (float)receivedSize/(float)expectedSize );
+            } completed:^(UIImage *image, NSData *data, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                if (error) {
+                    NSLog(@"ERROR: %@", error);
+                } else {
+                    
+                }
+            }];
+            
+        }
+        return cell;
+
+    }else{
         return nil;
     }
     
@@ -159,6 +209,7 @@
     NSString *createDate =  self.model_detail.createDate;
     NSString *dateString = [Utils fomateString:createDate];
     
+    
     if (createDate != nil ) {
         self.detail_date.text = dateString;
     }
@@ -179,6 +230,46 @@
     self.detail_text.numberOfLines = 0;
     
 
+    //转发视图
+    if (self.model_detail.retWeibo) {
+        retWeiboDetailView = [[UIView alloc]init];
+        retWeiboDetailView.origin = CGPointMake(20, self.detail_text.bottom);
+        retWeiboDetailView.bounds = CGRectMake(0, 0, SCREENWIDTH-40, 250);//初始先给一个默认高度250
+        retWeiboDetailView.backgroundColor = [UIColor grayColor];
+        [self addSubview:retWeiboDetailView];
+        
+        MLEmojiLabel *retDetail_text = [[MLEmojiLabel alloc]initWithFrame:CGRectZero];
+        retDetail_text.text = self.model_detail.retWeibo.text;
+        CGSize size = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
+        retDetail_text.origin = CGPointMake(10, 5);
+        retDetail_text.bounds = CGRectMake(0, 0, size.width, size.height);
+        retDetail_text.lineBreakMode = NSLineBreakByWordWrapping;
+        retDetail_text.numberOfLines = 0;
+        
+        [retWeiboDetailView addSubview:retDetail_text];
+        
+        UICollectionView *reWeibo_detail_imgs;
+        if (self.model_detail.retWeibo.pic_urls.count>0) {
+         
+            UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+            flowLayout.itemSize  = CGSizeMake(120, 120);
+            flowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
+            flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+            flowLayout.minimumInteritemSpacing = 10;
+            flowLayout.minimumLineSpacing = 10;
+            
+            reWeibo_detail_imgs = [[UICollectionView alloc]initWithFrame:CGRectMake(0,retDetail_text.bottom, SCREENWIDTH, 130)collectionViewLayout:flowLayout];
+            reWeibo_detail_imgs.backgroundColor = [UIColor whiteColor];
+            [reWeibo_detail_imgs registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"re_detail_Img_Cell"];
+            reWeibo_detail_imgs.showsHorizontalScrollIndicator = NO;
+            reWeibo_detail_imgs.delegate = self;
+            reWeibo_detail_imgs.dataSource = self;
+            
+            [retWeiboDetailView addSubview:reWeibo_detail_imgs];
+        }
+        
+        retWeiboDetailView.bounds = CGRectMake(0, 0, SCREENWIDTH-40, self.model_detail.retWeibo.pic_urls.count>0 ? 5+retDetail_text.height+130 : 5+retDetail_text.height);
+    }
     
     //微博图片
     if (self.model_detail.pic_urls.count > 0) {
@@ -199,14 +290,16 @@
         [self addSubview:detail_imgs];
     }
     
-    
-    
-    
-    
-    
-    
     //设置详细微博的高度
-    self.bounds = CGRectMake(0, 0, SCREENWIDTH, self.model_detail.pic_urls.count > 0 ? 20 + size.height + 10 + 30 + 20 + 20 + 130 : 20 + size.height + 10 + 30 + 20 + 20);
+    //正文、正文+图片、正文+转发正文、正文+转发图片
+//    if (self.model_detail.pic_urls.count > 0) {
+//        self.bounds = CGRectMake(0, 0, SCREENWIDTH, 20 + size.height + 10 + 30 + 20 + 20 + 130);
+//    }else if (self.model_detail.retWeibo){
+//        if (self.model_detail.retWeibo.pic_urls.count > 0) {
+//            self.bounds = CGRectMake(0, 0, SCREENWIDTH, <#CGFloat height#>)
+//        }
+//    }
+    self.bounds = CGRectMake(0, 0, SCREENWIDTH, self.model_detail.pic_urls.count > 0 ? 20 + size.height + 10 + 30 + 20 + 20 + 130 : 20 + size.height + 10 + 30 + 20 + 20 + retWeiboDetailView.height);
 
 }
 
