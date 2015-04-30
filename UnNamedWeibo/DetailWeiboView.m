@@ -66,7 +66,7 @@
     CGPoint translation = [gestureRecognizer translationInView:[gestureView superview]];
     
     //只有水平方向的距离绝对值 大于 垂直方向的距离绝对值 才能触发
-    if (fabsf(translation.x) > fabsf(translation.y) || (fabsf(translation.x) == 0 && fabsf(translation.y) == 0))
+    if (fabs(translation.x) > fabs(translation.y) || (fabs(translation.x) == 0 && fabs(translation.y) == 0))
     {
         return YES;
     }
@@ -224,7 +224,6 @@
     
     //微博正文
     self.detail_text.text = self.model_detail.text;
-    self.detail_text.backgroundColor = [UIColor redColor];
     self.detail_text.lineBreakMode = NSLineBreakByWordWrapping;
     self.detail_text.numberOfLines = 0;
     CGSize size = [self.detail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 40, MAXFLOAT)];
@@ -235,15 +234,28 @@
     //转发视图
     if (self.model_detail.retWeibo) {
         retWeiboDetailView = [[UIView alloc]initWithFrame:CGRectMake(20, 70+size.height, SCREENWIDTH-40, 250)];
-        retWeiboDetailView.backgroundColor = [UIColor grayColor];
+        retWeiboDetailView.backgroundColor = [UIColor colorWithRed:240.0/250.0 green:240.0/250.0 blue:240.0/250.0 alpha:1];
         [self addSubview:retWeiboDetailView];
+    
         
         MLEmojiLabel *retDetail_text = [[MLEmojiLabel alloc]initWithFrame:CGRectZero];
-        retDetail_text.text = self.model_detail.retWeibo.text;
+        
+        //转发的文字
+        NSString *nickName = self.model_detail.retWeibo.user.screen_name;
+        
+        retDetail_text.text = [NSString stringWithFormat:@"@%@:%@",nickName,self.model_detail.retWeibo.text];
         retDetail_text.lineBreakMode = NSLineBreakByWordWrapping;
         retDetail_text.numberOfLines = 0;
-        CGSize retTextSize = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
+        
+        retDetail_text.isNeedAtAndPoundSign = YES;
+        retDetail_text.disableEmoji = NO;
+        retDetail_text.delegate = self;
+        retDetail_text.customEmojiPlistName = @"EMOTION.plist";
+        retDetail_text.customEmojiRegex = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
+        retDetail_text.font =[UIFont systemFontOfSize:15.0f];
 
+        
+        CGSize retTextSize = [retDetail_text sizeThatFits:CGSizeMake([[UIScreen mainScreen]bounds].size.width - 60, MAXFLOAT)];
         retDetail_text.frame = CGRectMake(10, 5, retTextSize.width, retTextSize.height);
         
         [retWeiboDetailView addSubview:retDetail_text];
