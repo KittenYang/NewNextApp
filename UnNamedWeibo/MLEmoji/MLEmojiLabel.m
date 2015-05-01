@@ -119,7 +119,7 @@ NSString * const kURLActions[] = {@"url->",@"email->",@"phoneNumber->",@"at->",@
     NSArray *emotionArrays = [NSArray arrayWithContentsOfFile:emojiFilePath];
     for (NSDictionary *emoDic in emotionArrays) {
         NSString *emotionPNG = [emoDic objectForKey:@"png"];
-        NSString *emotionText = [emoDic objectForKey:@"cht"];
+        NSString *emotionText = [emoDic objectForKey:@"chs"];
         
         [EMOTIONPNG addObject:emotionPNG];
         [EMOTIONTEXT addObject:emotionText];
