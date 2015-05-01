@@ -1718,9 +1718,9 @@
 	</dict>
 	<dict>
 		<key>chs</key>
-		<string>[炸鸡和啤酒]</string>
+		<string>[炸鸡啤酒]</string>
 		<key>cht</key>
-		<string>[炸鸡和啤酒]</string>
+		<string>[炸鸡啤酒]</string>
 		<key>png</key>
 		<string>炸鸡和啤酒.png</string>
 		<key>type</key>
@@ -1763,6 +1763,16 @@
 		<string>[马到成功]</string>
 		<key>png</key>
 		<string>马到成功.png</string>
+		<key>type</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>chs</key>
+		<string>[拍照]</string>
+		<key>cht</key>
+		<string>[拍照]</string>
+		<key>png</key>
+		<string>lxh拍照.png</string>
 		<key>type</key>
 		<string>0</string>
 	</dict>

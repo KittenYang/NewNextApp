@@ -625,6 +625,7 @@
 		5F7BB2991AF32B8E000651D1 /* lxh_zhenjing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BB2491AF32B8E000651D1 /* lxh_zhenjing@2x.png */; };
 		5F7BB29A1AF32B8E000651D1 /* lxh_zhuanfa.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BB24A1AF32B8E000651D1 /* lxh_zhuanfa.png */; };
 		5F7BB29B1AF32B8E000651D1 /* lxh_zhuanfa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BB24B1AF32B8E000651D1 /* lxh_zhuanfa@2x.png */; };
+		5F7BB29D1AF33012000651D1 /* lxh拍照.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F7BB29C1AF33012000651D1 /* lxh拍照.png */; };
 		5F7FAD6C1A904CF500CEF622 /* KYCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7FAD6B1A904CF500CEF622 /* KYCell.m */; };
 		5F7FAD6F1A90DEB600CEF622 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F7FAD6E1A90DEB600CEF622 /* MainTabViewController.m */; };
 		5F7FAD8B1A923B5900CEF622 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7FAD801A923B5900CEF622 /* libWeiboSDK.a */; };
@@ -1733,6 +1734,7 @@
 		5F7BB2491AF32B8E000651D1 /* lxh_zhenjing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lxh_zhenjing@2x.png"; sourceTree = "<group>"; };
 		5F7BB24A1AF32B8E000651D1 /* lxh_zhuanfa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lxh_zhuanfa.png; sourceTree = "<group>"; };
 		5F7BB24B1AF32B8E000651D1 /* lxh_zhuanfa@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lxh_zhuanfa@2x.png"; sourceTree = "<group>"; };
+		5F7BB29C1AF33012000651D1 /* lxh拍照.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lxh拍照.png"; sourceTree = "<group>"; };
 		5F7FAD6A1A904CF500CEF622 /* KYCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYCell.h; sourceTree = "<group>"; };
 		5F7FAD6B1A904CF500CEF622 /* KYCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYCell.m; sourceTree = "<group>"; };
 		5F7FAD6D1A90DEB600CEF622 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
@@ -2637,6 +2639,7 @@
 				5F7BB0551AF32A7B000651D1 /* 爱红包.png */,
 				5F7BB0561AF32A7B000651D1 /* 羊年大吉.png */,
 				5F7BB0571AF32A7B000651D1 /* 马到成功.png */,
+				5F7BB29C1AF33012000651D1 /* lxh拍照.png */,
 			);
 			name = Emotions;
 			path = face;
@@ -4190,6 +4193,7 @@
 				5FE0CA181AB0368B00D4D0F7 /* 090.gif in Resources */,
 				5F3ABE381AE569670014DA38 /* 035.gif in Resources */,
 				5F3ABDE11AE569670014DA38 /* 005.png in Resources */,
+				5F7BB29D1AF33012000651D1 /* lxh拍照.png in Resources */,
 				5FE0C95E1AB0368B00D4D0F7 /* 028.gif in Resources */,
 				5FE0C93A1AB0368B00D4D0F7 /* 016.gif in Resources */,
 				5F7BB1471AF32B80000651D1 /* d_feizao@3x.png in Resources */,
