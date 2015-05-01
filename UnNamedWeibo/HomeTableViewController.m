@@ -401,7 +401,7 @@
         [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.6f initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             
             kycell_.avator.layer.transform = CATransform3DIdentity;
-//            cell.layer.transform = CATransform3DIdentity;
+//            cell.layer.transform = CATransfoiturm3DIdentity;
             
         } completion:nil];
     }

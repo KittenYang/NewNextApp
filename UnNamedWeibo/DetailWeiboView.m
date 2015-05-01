@@ -27,7 +27,7 @@
     self.detail_text.isNeedAtAndPoundSign = YES;
     self.detail_text.disableEmoji = NO;
     self.detail_text.delegate = self;
-    self.detail_text.customEmojiPlistName = @"EMOTION.plist";
+    self.detail_text.customEmojiPlistName = @"EMOTIONS_2.plist";
     self.detail_text.customEmojiRegex = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
     self.detail_text.font =[UIFont systemFontOfSize:16.0f];
     
