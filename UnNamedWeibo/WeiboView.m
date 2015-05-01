@@ -39,7 +39,7 @@ typedef enum ScrollDirection {
     self.weiboText.isNeedAtAndPoundSign = YES;
     self.weiboText.disableEmoji = NO;
     self.weiboText.delegate = self;
-    self.weiboText.customEmojiPlistName = @"EMOTIONS_2.plist";
+    self.weiboText.customEmojiPlistName = @"EMOTIONS.plist";
     self.weiboText.customEmojiRegex = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
     self.weiboText.font =[UIFont systemFontOfSize:16.0f];
     

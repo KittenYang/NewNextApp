@@ -27,7 +27,7 @@
     self.detail_text.isNeedAtAndPoundSign = YES;
     self.detail_text.disableEmoji = NO;
     self.detail_text.delegate = self;
-    self.detail_text.customEmojiPlistName = @"EMOTIONS_2.plist";
+    self.detail_text.customEmojiPlistName = @"EMOTIONS.plist";
     self.detail_text.customEmojiRegex = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
     self.detail_text.font =[UIFont systemFontOfSize:16.0f];
     
@@ -280,7 +280,7 @@
             [retWeiboDetailView addSubview:reWeibo_detail_imgs];
         }
         
-        retWeiboDetailView.frame = CGRectMake(5, 70+size.height, SCREENWIDTH-10, self.model_detail.retWeibo.pic_urls.count>0 ? 5+retTextSize.height+130 : 5+retTextSize.height);
+        retWeiboDetailView.frame = CGRectMake(5, 70+size.height, SCREENWIDTH-10, self.model_detail.retWeibo.pic_urls.count>0 ? 5+retTextSize.height+130 : 10+retTextSize.height);
         
     }
     

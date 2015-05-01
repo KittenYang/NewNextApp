@@ -1,1 +1,0 @@
-../../../MDCScrollBarLabel/MDCScrollBarLabel.h
