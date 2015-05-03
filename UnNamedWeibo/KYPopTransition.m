@@ -43,6 +43,22 @@
     fromView.frame = initialFrame;
     toView.frame = initialFrame;
     
+    //增加阴影
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = fromView.bounds;
+    gradient.colors = @[(id)[UIColor colorWithWhite:0.0 alpha:0.5].CGColor,
+                        (id)[UIColor colorWithWhite:0.0 alpha:0.0].CGColor];
+    gradient.startPoint = CGPointMake(0.0, 0.5);
+    gradient.endPoint = CGPointMake(0.8, 0.5);
+    
+    UIView *shadow = [[UIView alloc]initWithFrame:fromView.bounds];
+    shadow.backgroundColor = [UIColor clearColor];
+    [shadow.layer insertSublayer:gradient atIndex:1];
+    shadow.alpha = 1.0;
+    
+    [toView addSubview:shadow];
+
+    
     
     //改变View的锚点
     [self updateAnchorPointAndOffset:CGPointMake(0.0, 0.5) view:toView];
@@ -55,6 +71,7 @@
 
         //旋转fromView 90度
         toView.layer.transform = CATransform3DMakeRotation(0, 0, 1.0, 0);
+        shadow.alpha = 0.0;
 
     } completion:^(BOOL finished) {
 
