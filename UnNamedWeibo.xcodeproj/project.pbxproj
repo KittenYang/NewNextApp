@@ -343,7 +343,6 @@
 		5F87365C1A8C4EF9000CADF4 /* UnNamedWeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F87365B1A8C4EF9000CADF4 /* UnNamedWeiboTests.m */; };
 		5F8736841A8CC517000CADF4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736831A8CC517000CADF4 /* MessageViewController.m */; };
 		5F8736881A8CC55A000CADF4 /* SquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736871A8CC55A000CADF4 /* SquareViewController.m */; };
-		5F87368C1A8CC5A2000CADF4 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F87368B1A8CC5A2000CADF4 /* PostViewController.m */; };
 		5F8736C21A8D1B3F000CADF4 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8736C11A8D1B3F000CADF4 /* HomeTableViewController.m */; };
 		5F8737321A8F2399000CADF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8737311A8F2399000CADF4 /* BaseViewController.m */; };
 		5F8737361A8F23EA000CADF4 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8737351A8F23EA000CADF4 /* BaseTableViewController.m */; };
@@ -856,8 +855,6 @@
 		5F8736831A8CC517000CADF4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		5F8736861A8CC55A000CADF4 /* SquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareViewController.h; sourceTree = "<group>"; };
 		5F8736871A8CC55A000CADF4 /* SquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquareViewController.m; sourceTree = "<group>"; };
-		5F87368A1A8CC5A2000CADF4 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
-		5F87368B1A8CC5A2000CADF4 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		5F8736C01A8D1B3F000CADF4 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
 		5F8736C11A8D1B3F000CADF4 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		5F8737301A8F2399000CADF4 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -1591,8 +1588,6 @@
 		5F87368D1A8CC5A7000CADF4 /* PostViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5F87368A1A8CC5A2000CADF4 /* PostViewController.h */,
-				5F87368B1A8CC5A2000CADF4 /* PostViewController.m */,
 			);
 			name = PostViewController;
 			path = ..;
@@ -2384,7 +2379,6 @@
 				5F8736481A8C4EF7000CADF4 /* UserViewController.m in Sources */,
 				5F7FAD941A923F1400CEF622 /* UserModel.m in Sources */,
 				5F7FAE061A94C90500CEF622 /* RegexKitLite.m in Sources */,
-				5F87368C1A8CC5A2000CADF4 /* PostViewController.m in Sources */,
 				5F7FADD81A93840F00CEF622 /* UIView+Extra.m in Sources */,
 				5F8DB5781AA5816700727719 /* KYCuteView.m in Sources */,
 				5F9B7F101AEB71A300B8D358 /* KYGooeyMenu.m in Sources */,
