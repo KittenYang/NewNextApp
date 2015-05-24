@@ -140,7 +140,7 @@
     //显示KYGooeyMenu
     gooeyMenu = [[KYGooeyMenu alloc]initWithOrigin:CGPointMake(CGRectGetMidX(self.view.frame)-35, SCREENHEIGHT-60) andDiameter:70.0f andDelegate:self.tabBarController themeColor:[UIColor redColor]];
     gooeyMenu.menuDelegate = self;
-    gooeyMenu.radius = 70/3;//大圆的1/3    
+    gooeyMenu.radius = 70/3;//大圆的1/3
     gooeyMenu.extraDistance = 20;
     gooeyMenu.MenuCount = 4;
     gooeyMenu.menuImagesArray = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"tabbarItem_discover"],
