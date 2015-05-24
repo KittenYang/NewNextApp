@@ -135,7 +135,7 @@
     [super viewDidLoad];
     
     self.title = @"首页";
-
+    
     
     //显示KYGooeyMenu
     gooeyMenu = [[KYGooeyMenu alloc]initWithOrigin:CGPointMake(CGRectGetMidX(self.view.frame)-35, SCREENHEIGHT-60) andDiameter:70.0f andDelegate:self.tabBarController themeColor:[UIColor redColor]];
@@ -293,6 +293,10 @@
     cell.weiboModel = model;
     cell.cellView.weiboView.weiboModel = model;
 
+    //显示图片的VC
+    cell.cellView.weiboView.photoBrowser = self;
+    cell.cellView.weiboView.reWeiboView.photoBrowser = self;
+    
     
     //-----头像-------
     NSString *imgURL = model.user.avatar_large;

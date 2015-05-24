@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5AFE081F0F57D92C2155FCFF"
+               BlueprintIdentifier = "682F900E0C595FEBD7239B84"
                BuildableName = "libPods-KYCuteView.a"
                BlueprintName = "Pods-KYCuteView"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -20,6 +20,12 @@ typedef enum ScrollDirection {
 #import "ReWeiboView.h"
 #import "UIImageView+WebCache.h"
 #import "ReWeiboImgCollectionViewCell.h"
+#import "IDMPhoto.h"
+#import "IDMPhotoBrowser.h"
+
+@interface ReWeiboView()<IDMPhotoBrowserDelegate>
+
+@end
 
 @implementation ReWeiboView{
 
@@ -155,6 +161,31 @@ typedef enum ScrollDirection {
 }
 
 #pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    ReWeiboImgCollectionViewCell *cell = (ReWeiboImgCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    NSMutableArray *photos = [NSMutableArray new];//图片地址的数组
+    for (NSDictionary *picUrlDic in self.reWeiboModel.pic_urls) {
+        NSString *picUrl = [picUrlDic objectForKey:@"thumbnail_pic"];
+        [photos addObject:picUrl];
+    }
+    
+    NSArray *photosWithURL = [IDMPhoto photosWithURLs:photos];//photos objects的数组
+    
+    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc] initWithPhotos:photosWithURL animatedFromView:cell];
+    browser.delegate = self;
+    browser.displayActionButton = NO;
+    browser.displayArrowButton = YES;
+    browser.displayCounterLabel = YES;
+    browser.usePopAnimation = YES;
+    browser.scaleImage = cell.reWeiboImage.image;
+    [browser setInitialPageIndex:indexPath.item];
+    
+    [self.photoBrowser presentViewController:browser animated:YES completion:nil];
+    
+    
+}
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
     

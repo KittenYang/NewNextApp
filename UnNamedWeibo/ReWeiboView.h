@@ -20,7 +20,7 @@
 
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *reWeiboHeight;
-
+@property (strong, nonatomic) UIViewController *photoBrowser;
 
 //weiboModel
 @property (strong,nonatomic)WeiboModel *reWeiboModel;

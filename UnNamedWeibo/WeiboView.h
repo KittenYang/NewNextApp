@@ -19,7 +19,7 @@
 
 
 @property (strong, nonatomic) IBOutlet ReWeiboView *reWeiboView;
-
+@property (strong, nonatomic) UIViewController *photoBrowser;
 
 //weiboModel
 @property (strong,nonatomic)WeiboModel *weiboModel;

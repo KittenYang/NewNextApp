@@ -20,9 +20,11 @@ typedef enum ScrollDirection {
 #import "WeiboView.h"
 #import "UIImageView+WebCache.h"
 #import "CollectionViewCell.h"
+#import "IDMPhoto.h"
+#import "IDMPhotoBrowser.h"
 
 
-@interface WeiboView()
+@interface WeiboView()<IDMPhotoBrowserDelegate>
 
 @end
 
@@ -120,6 +122,7 @@ typedef enum ScrollDirection {
             }
             self.weiboModel.pic_urls = bmiddle_pic_urls;
             
+            
             NSDictionary *imgDICS = self.weiboModel.pic_urls[indexPath.item];
             NSString *imgUrl = [imgDICS objectForKey:@"thumbnail_pic"];
             NSURL *photoUrl = [NSURL URLWithString:imgUrl];
@@ -128,6 +131,8 @@ typedef enum ScrollDirection {
             }else{
                 cell.gifLabel.hidden = YES;
             }
+            
+            
             
             [cell.weiboImage sd_setImageWithURL:photoUrl placeholderImage:[UIImage imageNamed:@"placeholderImg_gray"] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
 //                NSLog(@"图片下载进度 = %f", (float)receivedSize/(float)expectedSize );
@@ -151,19 +156,36 @@ typedef enum ScrollDirection {
 }
 
 #pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CollectionViewCell *cell = (CollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    NSMutableArray *photos = [NSMutableArray new];//图片地址的数组
+    for (NSDictionary *picUrlDic in self.weiboModel.pic_urls) {
+        NSString *picUrl = [picUrlDic objectForKey:@"thumbnail_pic"];
+        [photos addObject:picUrl];
+    }
+    
+    NSArray *photosWithURL = [IDMPhoto photosWithURLs:photos];//photos objects的数组
+    
+    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc] initWithPhotos:photosWithURL animatedFromView:cell];
+    browser.delegate = self;
+    browser.displayActionButton = NO;
+    browser.displayArrowButton = YES;
+    browser.displayCounterLabel = YES;
+    browser.usePopAnimation = YES;
+    browser.scaleImage = cell.weiboImage.image;
+    [browser setInitialPageIndex:indexPath.item];
+    
+    [self.photoBrowser presentViewController:browser animated:YES completion:nil];
+    
+    
+}
+
+
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
     
-//    if (self.weiboModel.pic_urls.count == 1) {
-//        
-//        cell.frame = CGRectMake(0, 5, collectionView.bounds.size.width, 190);
-//        
-//    }else{
-//        if (indexPath.item == 0) {
-//            cell.frame = CGRectMake(0, 5, 190, 190);
-//        }
-//    }
-
     
     ScrollDirection scrollDirection;
     if (lastContentOffset > collectionView.contentOffset.x)
@@ -188,6 +210,7 @@ typedef enum ScrollDirection {
     }
 
 }
+
 
 
 @end
