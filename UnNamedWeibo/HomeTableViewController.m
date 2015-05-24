@@ -30,6 +30,7 @@
 #import "KYGooeyMenu.h"
 
 
+
 @interface HomeTableViewController ()<menuDidSelectedDelegate>
 
 @property (strong, nonatomic) SKSplashView *splashView;
@@ -139,9 +140,13 @@
     //显示KYGooeyMenu
     gooeyMenu = [[KYGooeyMenu alloc]initWithOrigin:CGPointMake(CGRectGetMidX(self.view.frame)-35, SCREENHEIGHT-60) andDiameter:70.0f andDelegate:self.tabBarController themeColor:[UIColor redColor]];
     gooeyMenu.menuDelegate = self;
-    gooeyMenu.radius = 70/4;//大圆的1/4
+    gooeyMenu.radius = 70/3;//大圆的1/3    
     gooeyMenu.extraDistance = 20;
     gooeyMenu.MenuCount = 4;
+    gooeyMenu.menuImagesArray = [NSMutableArray arrayWithObjects:[UIImage imageNamed:@"tabbarItem_discover"],
+        [UIImage imageNamed:@"tabbarItem_home"],
+        [UIImage imageNamed:@"tabbarItem_message"],
+        [UIImage imageNamed:@"tabbarItem_user_man"],nil];
     
     
     //添加启动页面
@@ -257,6 +262,13 @@
     return [self ky_getEstimatedCellHeightFromCache:indexPath defaultHeight:250.0f];
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    WeiboModel *model = [self.data objectAtIndex:indexPath.row];
+//    return [tableView fd_heightForCellWithIdentifier:@"WeiboCell" cacheByIndexPath:indexPath configuration:^(KYCell *cell) {
+//        [self updateCellContentView:cell withWeiboModel:model withIndexPath:indexPath];
+//    }];
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -269,7 +281,7 @@
         CGSize cellSize = [cell systemLayoutSizeFittingSize:CGSizeMake(self.view.frame.size.width, 0) withHorizontalFittingPriority:1000.0 verticalFittingPriority:50.0];
         [self ky_putEstimatedCellHeightToCache:indexPath height:cellSize.height];
     }
-
+    
     return cell;
 }
 

@@ -1,17 +1,23 @@
 PODS:
+  - KYCuteView (1.3.0)
+  - KYGooeyMenu (1.0.5)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage-YLGIFImage (0.2)
   - SDWebImage/Core (3.7.1)
   - Shimmer (1.0.2)
   - SKSplashView (0.1.0)
+  - UITableViewController+KYSelfSizingPushFix (1.0.0)
   - YLGIFImage (0.11)
 
 DEPENDENCIES:
+  - KYCuteView (~> 1.3.0)
+  - KYGooeyMenu (~> 1.0.5)
   - SDWebImage (from `https://github.com/liyong03/SDWebImage.git`)
   - SDWebImage-YLGIFImage (from `https://github.com/liyong03/SDWebImage-YLGIFImage.git`)
   - Shimmer (~> 1.0.2)
   - SKSplashView
+  - UITableViewController+KYSelfSizingPushFix (~> 1.0.0)
   - YLGIFImage
 
 EXTERNAL SOURCES:
@@ -29,10 +35,13 @@ CHECKOUT OPTIONS:
     :git: https://github.com/liyong03/SDWebImage-YLGIFImage.git
 
 SPEC CHECKSUMS:
-  SDWebImage: ff5239e81afa8f9cc29552712cac071183529f66
-  SDWebImage-YLGIFImage: c0d061245bd11e4293c39fb002484a741ab1f1ad
+  KYCuteView: ad61c0ef95a2595e6bade134189d5a4dbe3ed3f2
+  KYGooeyMenu: 3d9f3504b59a5dd1b6c4ff34a06836284647a2aa
+  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
+  SDWebImage-YLGIFImage: ebfaf69d15388cfafa3b338b18700acfa0e265ea
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SKSplashView: 8cdb1bfccb5857cb141751d01b03cf132b110168
+  UITableViewController+KYSelfSizingPushFix: 4c348c893d78c86bf818c80020ef32e55d4f2cf0
   YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.37.1

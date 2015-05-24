@@ -1,0 +1,29 @@
+{
+  "name": "SDWebImage-YLGIFImage",
+  "version": "0.2",
+  "summary": "Make SDWebImage support decoding GIF image using YLGIFImage.",
+  "homepage": "https://github.com/liyong03/SDWebImage-YLGIFImage.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "liyong03": "liyong03@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/liyong03/SDWebImage-YLGIFImage.git",
+    "tag": "0.2"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source_files": "SDWebImage+YLGIFImage",
+  "frameworks": [
+    "Foundation",
+    "UIKit",
+    "MobileCoreServices",
+    "ImageIO",
+    "CoreGraphics"
+  ],
+  "requires_arc": true
+}

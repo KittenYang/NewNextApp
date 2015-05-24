@@ -6,6 +6,18 @@
 // project.
 
 
+// KYCuteView
+#define COCOAPODS_POD_AVAILABLE_KYCuteView
+#define COCOAPODS_VERSION_MAJOR_KYCuteView 1
+#define COCOAPODS_VERSION_MINOR_KYCuteView 3
+#define COCOAPODS_VERSION_PATCH_KYCuteView 0
+
+// KYGooeyMenu
+#define COCOAPODS_POD_AVAILABLE_KYGooeyMenu
+#define COCOAPODS_VERSION_MAJOR_KYGooeyMenu 1
+#define COCOAPODS_VERSION_MINOR_KYGooeyMenu 0
+#define COCOAPODS_VERSION_PATCH_KYGooeyMenu 5
+
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_SDWebImage 3
@@ -35,6 +47,12 @@
 #define COCOAPODS_VERSION_MAJOR_Shimmer 1
 #define COCOAPODS_VERSION_MINOR_Shimmer 0
 #define COCOAPODS_VERSION_PATCH_Shimmer 2
+
+// UITableViewController+KYSelfSizingPushFix
+#define COCOAPODS_POD_AVAILABLE_UITableViewController_KYSelfSizingPushFix
+#define COCOAPODS_VERSION_MAJOR_UITableViewController_KYSelfSizingPushFix 1
+#define COCOAPODS_VERSION_MINOR_UITableViewController_KYSelfSizingPushFix 0
+#define COCOAPODS_VERSION_PATCH_UITableViewController_KYSelfSizingPushFix 0
 
 // YLGIFImage
 #define COCOAPODS_POD_AVAILABLE_YLGIFImage

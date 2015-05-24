@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3C9EB9FD7CC66C7DD89D34F7"
+               BlueprintIdentifier = "D97C34CAF29DC92F67CC0956"
                BuildableName = "libPods-Shimmer.a"
                BlueprintName = "Pods-Shimmer"
                ReferencedContainer = "container:Pods.xcodeproj">

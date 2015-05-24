@@ -42,8 +42,8 @@
     
     self.tableView.scrollsToTop = YES;
     self.tableView.backgroundColor = [UIColor whiteColor];
+//    self.tableView.estimatedRowHeight = 250;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 250;
 
     
     //去除黑线

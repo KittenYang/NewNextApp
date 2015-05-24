@@ -20,7 +20,7 @@ typedef enum ScrollDirection {
 #import "WeiboView.h"
 #import "UIImageView+WebCache.h"
 #import "CollectionViewCell.h"
-#import "XXNibBridge.h"
+
 
 @interface WeiboView()
 

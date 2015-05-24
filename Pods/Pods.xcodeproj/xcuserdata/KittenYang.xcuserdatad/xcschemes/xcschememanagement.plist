@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-KYCuteView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-KYGooeyMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SDWebImage-YLGIFImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-UITableViewController+KYSelfSizingPushFix.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-YLGIFImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F595CAF53A43E2BD9C9CF45</key>
+		<key>3ED2299AE795C2496388A987</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C9EB9FD7CC66C7DD89D34F7</key>
+		<key>5AFE081F0F57D92C2155FCFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>78F418F654F480635DEEFC3A</key>
+		<key>644561CEAAF8EA51FE933ECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>861D4ABD5A89A35831402AAF</key>
+		<key>66B75354B68B9DD9889ACADF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CA0459A716EB8DCCA823ED72</key>
+		<key>7F32E7FD33FBC18675920F83</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF83D9589CC4ADF26B8F3D5A</key>
+		<key>89FA3B2398104E258E4F44DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9B3DD714C88599F552743EA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D97C34CAF29DC92F67CC0956</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEC10637EE7FC2907FE754B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
