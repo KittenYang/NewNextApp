@@ -12,6 +12,9 @@
 		5F2889591AA868F200E64BAD /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2889581AA868F200E64BAD /* CollectionViewCell.m */; };
 		5F28895C1AA8B93E00E64BAD /* ReWeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F28895B1AA8B93E00E64BAD /* ReWeiboView.m */; };
 		5F28895F1AA8BD1700E64BAD /* ReWeiboImgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F28895E1AA8BD1700E64BAD /* ReWeiboImgCollectionViewCell.m */; };
+		5F373F8F1B14A48F00D0409D /* VVeboLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F373F8C1B14A48F00D0409D /* VVeboLabel.m */; };
+		5F373F901B14A48F00D0409D /* VVeboTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F373F8E1B14A48F00D0409D /* VVeboTableViewCell.m */; };
+		5F373F931B14A49C00D0409D /* VVeboTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F373F921B14A49C00D0409D /* VVeboTableView.m */; };
 		5F3ABC8C1AE51DE40014DA38 /* UITableViewController+KYSelfSizingPushFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3ABC8B1AE51DE40014DA38 /* UITableViewController+KYSelfSizingPushFix.m */; };
 		5F3ABC941AE55AFC0014DA38 /* KYPopInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3ABC8F1AE55AFB0014DA38 /* KYPopInteractiveTransition.m */; };
 		5F3ABC951AE55AFC0014DA38 /* KYPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F3ABC911AE55AFC0014DA38 /* KYPopTransition.m */; };
@@ -485,6 +488,12 @@
 		5F28895B1AA8B93E00E64BAD /* ReWeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReWeiboView.m; sourceTree = "<group>"; };
 		5F28895D1AA8BD1700E64BAD /* ReWeiboImgCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReWeiboImgCollectionViewCell.h; sourceTree = "<group>"; };
 		5F28895E1AA8BD1700E64BAD /* ReWeiboImgCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReWeiboImgCollectionViewCell.m; sourceTree = "<group>"; };
+		5F373F8B1B14A48F00D0409D /* VVeboLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboLabel.h; sourceTree = "<group>"; };
+		5F373F8C1B14A48F00D0409D /* VVeboLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboLabel.m; sourceTree = "<group>"; };
+		5F373F8D1B14A48F00D0409D /* VVeboTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboTableViewCell.h; sourceTree = "<group>"; };
+		5F373F8E1B14A48F00D0409D /* VVeboTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboTableViewCell.m; sourceTree = "<group>"; };
+		5F373F911B14A49C00D0409D /* VVeboTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VVeboTableView.h; sourceTree = "<group>"; };
+		5F373F921B14A49C00D0409D /* VVeboTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VVeboTableView.m; sourceTree = "<group>"; };
 		5F3ABC8A1AE51DE40014DA38 /* UITableViewController+KYSelfSizingPushFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+KYSelfSizingPushFix.h"; sourceTree = "<group>"; };
 		5F3ABC8B1AE51DE40014DA38 /* UITableViewController+KYSelfSizingPushFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+KYSelfSizingPushFix.m"; sourceTree = "<group>"; };
 		5F3ABC8E1AE55AFB0014DA38 /* KYPopInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYPopInteractiveTransition.h; sourceTree = "<group>"; };
@@ -1530,6 +1539,12 @@
 		5F8736811A8CC4D8000CADF4 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5F373F8B1B14A48F00D0409D /* VVeboLabel.h */,
+				5F373F8C1B14A48F00D0409D /* VVeboLabel.m */,
+				5F373F8D1B14A48F00D0409D /* VVeboTableViewCell.h */,
+				5F373F8E1B14A48F00D0409D /* VVeboTableViewCell.m */,
+				5F373F911B14A49C00D0409D /* VVeboTableView.h */,
+				5F373F921B14A49C00D0409D /* VVeboTableView.m */,
 				5F8736C01A8D1B3F000CADF4 /* HomeTableViewController.h */,
 				5F8736C11A8D1B3F000CADF4 /* HomeTableViewController.m */,
 				5F1147D41AB49F90009C75B0 /* DetailViewController.h */,
@@ -2315,6 +2330,7 @@
 				5F7FAD6F1A90DEB600CEF622 /* MainTabViewController.m in Sources */,
 				5F7FADFD1A9475A000CEF622 /* Utils.m in Sources */,
 				5F8737321A8F2399000CADF4 /* BaseViewController.m in Sources */,
+				5F373F8F1B14A48F00D0409D /* VVeboLabel.m in Sources */,
 				5F1147D61AB49F90009C75B0 /* DetailViewController.m in Sources */,
 				5F8736841A8CC517000CADF4 /* MessageViewController.m in Sources */,
 				5F8736481A8C4EF7000CADF4 /* UserViewController.m in Sources */,
@@ -2326,12 +2342,14 @@
 				5FABDD4D1AE7E44800B8A23E /* DetailWeiboView.m in Sources */,
 				5F8737361A8F23EA000CADF4 /* BaseTableViewController.m in Sources */,
 				5F3ABC961AE55AFC0014DA38 /* KYPushTransition.m in Sources */,
+				5F373F901B14A48F00D0409D /* VVeboTableViewCell.m in Sources */,
 				5F7FAE471A9794AE00CEF622 /* ACTimeScroller.m in Sources */,
 				5F28895F1AA8BD1700E64BAD /* ReWeiboImgCollectionViewCell.m in Sources */,
 				5F8736451A8C4EF7000CADF4 /* AppDelegate.m in Sources */,
 				5F7FAE901A9B42B800CEF622 /* KYLoadingHUD.m in Sources */,
 				5F7FAD6C1A904CF500CEF622 /* KYCell.m in Sources */,
 				5F7FAE9E1A9C409F00CEF622 /* JellyView.m in Sources */,
+				5F373F931B14A49C00D0409D /* VVeboTableView.m in Sources */,
 				5F8736421A8C4EF7000CADF4 /* main.m in Sources */,
 				5F3ABC8C1AE51DE40014DA38 /* UITableViewController+KYSelfSizingPushFix.m in Sources */,
 				5F8736881A8CC55A000CADF4 /* SquareViewController.m in Sources */,
