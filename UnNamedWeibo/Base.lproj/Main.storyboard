@@ -119,11 +119,30 @@
             </objects>
             <point key="canvasLocation" x="-2156" y="2333"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="KJO-kU-vXS">
+            <objects>
+                <viewController id="g0w-vL-Auh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qmm-nI-oAr"/>
+                        <viewControllerLayoutGuide type="bottom" id="boQ-k1-md8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="60L-wJ-t5l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ixX-nN-PS5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgM-4q-9ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2852" y="1557"/>
+        </scene>
         <!--Home Table View Controller-->
         <scene sceneID="uqd-MP-q6I">
             <objects>
                 <tableViewController id="xCt-L4-EeA" customClass="HomeTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="464" sectionHeaderHeight="22" sectionFooterHeight="22" id="SIf-K9-THH" customClass="VVeboTableView">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="464" sectionHeaderHeight="22" sectionFooterHeight="22" id="SIf-K9-THH">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -413,12 +432,12 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </toolbar>
                     <connections>
-                        <segue destination="xCt-L4-EeA" kind="relationship" relationship="rootViewController" id="0Wh-Uz-Ogz"/>
+                        <segue destination="g0w-vL-Auh" kind="relationship" relationship="rootViewController" id="Xlk-ES-Z35"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HPb-eu-A6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2164" y="672"/>
+            <point key="canvasLocation" x="-2208" y="672"/>
         </scene>
         <!--3 Navigaion Controller-->
         <scene sceneID="aOY-wq-EKc">
