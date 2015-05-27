@@ -25,6 +25,10 @@ CGRect  CGRectMoveToCenter(CGRect rect, CGPoint center);
 @property CGFloat left;
 @property CGFloat bottom;
 @property CGFloat right;
+@property CGFloat x;
+@property CGFloat y;
+
+
 
 - (void) moveBy: (CGPoint) delta;
 - (void) scaleBy: (CGFloat) scaleFactor;

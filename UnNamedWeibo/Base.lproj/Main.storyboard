@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="-2156" y="2333"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="KJO-kU-vXS">
             <objects>
-                <viewController id="g0w-vL-Auh" sceneMemberID="viewController">
+                <viewController id="g0w-vL-Auh" customClass="WBHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qmm-nI-oAr"/>
                         <viewControllerLayoutGuide type="bottom" id="boQ-k1-md8"/>
@@ -416,7 +416,7 @@
         <!--2 Navigation Controller-->
         <scene sceneID="YCg-hb-TwY">
             <objects>
-                <navigationController title="首页" hidesBarsOnSwipe="YES" id="K3y-Dz-DBn" userLabel="2 Navigation Controller" sceneMemberID="viewController">
+                <navigationController title="首页" id="K3y-Dz-DBn" userLabel="2 Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="drop" id="s4Z-B1-qP9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Mp-Lf-WgG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

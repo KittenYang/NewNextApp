@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "UserModel.h"
 
 @interface WeiboModel : NSObject<NSCoding>
@@ -31,5 +32,7 @@
 @property (nonatomic,retain) WeiboModel   *retWeibo;//被转发的原微博
 @property (nonatomic,retain) UserModel    *user;//微博的作者用户
 
-
+//处理数据
+@property(assign,nonatomic)CGFloat weiboTextHeight;//本身内容高度
+@property(assign,nonatomic)CGFloat retWeiboTextHeight;//转发内容高度
 @end

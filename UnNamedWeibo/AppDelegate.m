@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "CONST.h"
-#import "UserViewController.h"
+#import "NSDate+ShortCut.h"
 
 
 
@@ -21,9 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    
     [WeiboSDK enableDebugMode:YES];
-    [WeiboSDK registerApp:kWeiboAppKey];
+    [WeiboSDK registerApp:kAppKey];
+    [WBEmotionManage emotionsArray];
     
     return YES;
     
@@ -44,22 +43,11 @@
 }
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
-    if ([response isKindOfClass:WBAuthorizeResponse.class]){
-        self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
-        self.wbexpirationdate = [(WBAuthorizeResponse *)response expirationDate];
-        self.wbuserid =  [(WBAuthorizeResponse *)response userID];
-        
-        
-        //保存认证的数据到本地
-        NSDictionary *authData = [NSDictionary dictionaryWithObjectsAndKeys:
-                                  self.wbtoken, @"accessToken",
-                                  self.wbexpirationdate, @"expirationDate",
-                                  self.wbuserid,@"hostUserID",
-                                  nil];
-        [[NSUserDefaults standardUserDefaults] setObject:authData forKey:@"WeiboAuthData"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [[NSNotificationCenter defaultCenter]postNotificationName:kWeiboAuthSuccessNotification object:nil];
-    
+    if ([response isKindOfClass:WBAuthorizeResponse.class])
+    {
+        WBSession *session=[[WBSession alloc]init];
+        [session setCurrentSession:(WBAuthorizeResponse *)response];
+        [[NSNotificationCenter defaultCenter]postNotificationName:KLoginNotification object:self];
     }
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -27,13 +27,16 @@ PODS:
     - pop
   - KYCuteView (1.3.0)
   - KYGooeyMenu (1.0.5)
+  - MJRefresh (1.4.6)
   - pop (1.0.7)
+  - PureLayout (2.0.6)
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage-YLGIFImage (0.2)
   - SDWebImage/Core (3.7.1)
   - Shimmer (1.0.2)
   - SKSplashView (0.1.0)
+  - SVProgressHUD (1.1.3)
   - UITableViewController+KYSelfSizingPushFix (1.0.0)
   - YLGIFImage (0.11)
 
@@ -42,11 +45,14 @@ DEPENDENCIES:
   - IDMPhotoBrowser (~> 1.6.2)
   - KYCuteView (~> 1.3.0)
   - KYGooeyMenu (~> 1.0.5)
+  - MJRefresh (~> 1.4.6)
   - pop (~> 1.0.7)
+  - PureLayout (~> 2.0.6)
   - SDWebImage (from `https://github.com/liyong03/SDWebImage.git`)
   - SDWebImage-YLGIFImage (from `https://github.com/liyong03/SDWebImage-YLGIFImage.git`)
   - Shimmer (~> 1.0.2)
   - SKSplashView
+  - SVProgressHUD (~> 1.1.3)
   - UITableViewController+KYSelfSizingPushFix (~> 1.0.0)
   - YLGIFImage
 
@@ -70,11 +76,14 @@ SPEC CHECKSUMS:
   IDMPhotoBrowser: ebbfa6690456b72dd92d93b7bc11d71519f4d06d
   KYCuteView: ad61c0ef95a2595e6bade134189d5a4dbe3ed3f2
   KYGooeyMenu: 3d9f3504b59a5dd1b6c4ff34a06836284647a2aa
+  MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  PureLayout: f25f0bb904d5ccfe6e31da3cb869185259f02e0d
   SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
   SDWebImage-YLGIFImage: ebfaf69d15388cfafa3b338b18700acfa0e265ea
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SKSplashView: 8cdb1bfccb5857cb141751d01b03cf132b110168
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   UITableViewController+KYSelfSizingPushFix: 4c348c893d78c86bf818c80020ef32e55d4f2cf0
   YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 

@@ -6,6 +6,10 @@
 //  Copyright (c) 2015 Kitten Yang. All rights reserved.
 //
 
+
+#define SIZE_GAP_LEFT 15
+
+
 #import "WeiboModel.h"
 
 @implementation WeiboModel
@@ -94,5 +98,37 @@
         UserModel *user = [[UserModel alloc] initWithUserDic:userDic];
         self.user = user;
     }
+    
+    
+    [self handle];
+
 }
+
+
+
+
+#pragma mark -- 计算数据
+-(void)handle{
+    //计算正文高度
+//    CGSize WEIBOTEXTHEIGHT = [self.text sizeWithAttributes:nil];
+//    self.weiboTextHeight = WEIBOTEXTHEIGHT.height;
+
+
+    
+
+    UIFont *font        = [UIFont boldSystemFontOfSize:18];
+    CGRect  rect        = [self.text boundingRectWithSize:CGSizeMake(300, 1000) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil];
+    self.weiboTextHeight = rect.size.height;
+    
+
+    CGRect  reRect        = [self.retWeibo.text boundingRectWithSize:CGSizeMake(300, 1000) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil];
+    self.weiboTextHeight = reRect.size.height;
+    
+}
+
+
+
+
+
+
 @end

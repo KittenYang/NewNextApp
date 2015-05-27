@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3D96C838AC69347C0094F6B"
+               BlueprintIdentifier = "E9A79F47FD9C37E21F89F86E"
                BuildableName = "libPods-KYGooeyMenu.a"
                BlueprintName = "Pods-KYGooeyMenu"
                ReferencedContainer = "container:Pods.xcodeproj">
