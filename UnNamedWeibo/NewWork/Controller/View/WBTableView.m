@@ -36,27 +36,27 @@ static NSString *kidentifier=@"WBTableViewCell";
     return self;
 }
 
-//用户触摸时第一时间加载内容
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-
-    [self loadContent];
-
-    return [super hitTest:point withEvent:event];
-}
-
-- (void)loadContent{
-
-    if (self.indexPathsForVisibleRows.count<=0) {
-        return;
-    }
-    if (self.visibleCells&&self.visibleCells.count>0) {
-        for (id temp in [self.visibleCells copy]) {
-            WBTableViewCell *cell = (WBTableViewCell *)temp;
-            NSInteger i = [self indexPathForCell:cell].row;
-            cell.homeCellViewModel=self.weiboArray[i];
-        }
-    }
-}
+////用户触摸时第一时间加载内容
+//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+//
+//    [self loadContent];
+//
+//    return [super hitTest:point withEvent:event];
+//}
+//
+//- (void)loadContent{
+//
+//    if (self.indexPathsForVisibleRows.count<=0) {
+//        return;
+//    }
+//    if (self.visibleCells&&self.visibleCells.count>0) {
+//        for (id temp in [self.visibleCells copy]) {
+//            WBTableViewCell *cell = (WBTableViewCell *)temp;
+//            NSInteger i = [self indexPathForCell:cell].row;
+//            cell.homeCellViewModel=self.weiboArray[i];
+//        }
+//    }
+//}
 
 
 #pragma UITableView - dataSource

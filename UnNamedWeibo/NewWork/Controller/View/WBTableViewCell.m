@@ -105,9 +105,7 @@
 -(void)setHomeCellViewModel:(WBHomeCellViewModel *)homeCellViewModel
 {
     
-    if (drawed || _homeCellViewModel == homeCellViewModel) {
-        return;
-    }
+
 
     _homeCellViewModel=homeCellViewModel;
     drawed = YES;

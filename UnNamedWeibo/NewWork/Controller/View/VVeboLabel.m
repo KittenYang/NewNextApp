@@ -129,8 +129,10 @@ static inline NSRegularExpression * TopicRegularExpression() {
                                  };
     //For each definition entry apply the highlighting to matched ranges
     for(NSString* key in definition) {
+        //第一遍循环：key首先是“url”，expression就是“(http|https)://(t.cn/|weibo.com/)+(([a-zA-Z0-9/])*)”，得到所有匹配的结果matches，比如有网易视频、知乎日报、虎嗅网三个网址
         NSString* expression = [definition objectForKey:key];
         NSArray* matches = [[NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionDotMatchesLineSeparators error:nil] matchesInString:string options:0 range:range];
+        //遍历这三个网址
         for(NSTextCheckingResult* match in matches) {
             UIColor* textColor = nil;
             //Get the text color, if it is a custom key and no color was defined, choose black
@@ -149,6 +151,11 @@ static inline NSRegularExpression * TopicRegularExpression() {
             } else {
                 UIColor *highlightColor = highlightColors[key];
                 [coloredString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)highlightColor.CGColor range:match.range];
+                if ([key isEqualToString:@"url"]) {
+//                    [coloredString replaceCharactersInRange:match.range withString:@"0"];
+                    [coloredString addAttribute:(NSString*)kCTForegroundColorAttributeName value:[UIColor blueColor] range:match.range];
+
+                }
             }
         }
     }

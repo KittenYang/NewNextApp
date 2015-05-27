@@ -515,13 +515,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UnNamedWeibo/NewWork/Controller/View/WBTableViewCell.m"
-            timestampString = "454427302.966992"
+            filePath = "UnNamedWeibo/NewWork/Controller/View/VVeboLabel.m"
+            timestampString = "454441358.025615"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "-setHomeCellViewModel:"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "-highlightText:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UnNamedWeibo/NewWork/Controller/View/VVeboLabel.m"
+            timestampString = "454441358.025615"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "-highlightText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
