@@ -15,17 +15,18 @@
 
 
 @interface WBContentImageView()
-{
-    UIImageView *_imageOne;
-    UIImageView *_imageTwo;
-    UIImageView *_imageThree;
-    UIImageView *_imageFour;
-    UIImageView *_imageFive;
-    UIImageView *_imageSix;
-    UIImageView *_imageSeven;
-    UIImageView *_imageEight;
-    UIImageView *_imageNine;
-}
+
+@property(nonatomic,strong)UIImageView *imageOne;
+@property(nonatomic,strong)UIImageView *imageTwo;
+@property(nonatomic,strong)UIImageView *imageThree;
+@property(nonatomic,strong)UIImageView *imageFour;
+@property(nonatomic,strong)UIImageView *imageFive;
+@property(nonatomic,strong)UIImageView *imageSix;
+@property(nonatomic,strong)UIImageView *imageSeven;
+@property(nonatomic,strong)UIImageView *imageEight;
+@property(nonatomic,strong)UIImageView *imageNine;
+
+
 @end
 
 
@@ -132,7 +133,7 @@
     for (NSInteger i=0;i<9;++i)
     {
         UIImageView *image=(UIImageView *)[self viewWithTag:i+1];
-        
+
         if (i<self.urlArray.count)
         {
             image.hidden = NO;
