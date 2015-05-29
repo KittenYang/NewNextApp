@@ -51,6 +51,12 @@
     }
     return self;
 }
+-(void)setContainerViewController:(UIViewController *)containerViewController{
+    if (_containerViewController != containerViewController) {
+        _containerViewController = containerViewController;
+        _contentImageView.containerViewController = _containerViewController;
+    }
+}
 
 #pragma 配置view
 -(void)configurationContentView
@@ -83,7 +89,6 @@
     
     
     _contentImageView=[[WBContentImageView alloc]init];
-    _contentImageView.containerViewController = self.containerViewController;
     [self.contentView addSubview:_contentImageView];
     
     

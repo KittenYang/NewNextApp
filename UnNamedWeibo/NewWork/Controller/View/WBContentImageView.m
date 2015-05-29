@@ -121,6 +121,7 @@
     image.contentMode=UIViewContentModeScaleAspectFill;
     image.backgroundColor = [UIColor lightGrayColor];
     image.clipsToBounds=YES;
+    image.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapPhoto:)];
     [image addGestureRecognizer:tap];
     return image;
@@ -129,7 +130,15 @@
 #pragma 赋值
 -(void)setUrlArray:(NSMutableArray *)urlArray
 {
-    _urlArray=urlArray;
+    NSMutableArray *arr = [NSMutableArray array];
+    for (NSInteger i = 0; i<urlArray.count; i++) {
+        NSString *thumbnailImageUrl = urlArray[i];
+        thumbnailImageUrl = [thumbnailImageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        [arr addObject:thumbnailImageUrl];
+    }
+    _urlArray = arr;
+
+    
     for (NSInteger i=0;i<9;++i)
     {
         UIImageView *image=(UIImageView *)[self viewWithTag:i+1];
@@ -143,6 +152,7 @@
             image.hidden = YES;
         }
     }
+    
 }
 
 
@@ -160,7 +170,7 @@
     browser.displayCounterLabel = YES;
     browser.usePopAnimation = YES;
     browser.scaleImage = tapedImgView.image;
-    [browser setInitialPageIndex:tapedImgView.tag];
+    [browser setInitialPageIndex:tapedImgView.tag-1];
     
     [self.containerViewController presentViewController:browser animated:YES completion:nil];
 

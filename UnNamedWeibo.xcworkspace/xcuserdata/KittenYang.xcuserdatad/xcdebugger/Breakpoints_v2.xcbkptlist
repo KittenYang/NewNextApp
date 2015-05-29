@@ -500,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UnNamedWeibo/NewWork/Controller/View/WBTableViewCell.m"
-            timestampString = "454595614.646449"
+            timestampString = "454601058.207558"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-configurationLocation"
             landmarkType = "5">
          </BreakpointContent>
