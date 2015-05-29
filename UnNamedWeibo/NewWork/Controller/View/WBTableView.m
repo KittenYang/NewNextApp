@@ -77,6 +77,7 @@ static NSString *kidentifier=@"WBTableViewCell";
     
     WBHomeCellViewModel *homeCellViewModel=[self.weiboArray objectAtIndex:indexPath.row];
     cell.homeCellViewModel=homeCellViewModel;
+    cell.containerViewController = self.superview.viewController;
     
     return cell;
 }

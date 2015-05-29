@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NSDate+ShortCut.h"
+#import "KMCGeigerCounter.h"
 
 
 
@@ -23,6 +24,7 @@
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kAppKey];
     [WBEmotionManage emotionsArray];
+    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
     
     return YES;
     

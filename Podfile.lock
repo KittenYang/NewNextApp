@@ -25,6 +25,7 @@ PODS:
     - AFNetworking
     - DACircularProgress
     - pop
+  - KMCGeigerCounter (0.2.2)
   - KYCuteView (1.3.0)
   - KYGooeyMenu (1.0.5)
   - MJRefresh (1.4.6)
@@ -43,6 +44,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
   - IDMPhotoBrowser (~> 1.6.2)
+  - KMCGeigerCounter (~> 0.2.2)
   - KYCuteView (~> 1.3.0)
   - KYGooeyMenu (~> 1.0.5)
   - MJRefresh (~> 1.4.6)
@@ -74,6 +76,7 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   IDMPhotoBrowser: ebbfa6690456b72dd92d93b7bc11d71519f4d06d
+  KMCGeigerCounter: f8cc3c4aa19fc6f8cec168fb03b364b84c118a7a
   KYCuteView: ad61c0ef95a2595e6bade134189d5a4dbe3ed3f2
   KYGooeyMenu: 3d9f3504b59a5dd1b6c4ff34a06836284647a2aa
   MJRefresh: 2eaa3fd8f67fbb86497840fb0167446f7eb61dc7

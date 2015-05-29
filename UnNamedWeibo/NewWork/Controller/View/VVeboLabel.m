@@ -141,8 +141,30 @@ static inline NSRegularExpression * TopicRegularExpression() {
             
             
             if (labelImageView.image != nil && currentRange.location!=-1 && currentRange.location>=match.range.location && currentRange.length+currentRange.location<=match.range.length+match.range.location) {
+                //点击的颜色
                 [coloredString addAttribute:(NSString*)kCTForegroundColorAttributeName
-                                      value:(id)[UIColor colorWithRed:224/255.0 green:44/255.0 blue:86/255.0 alpha:1].CGColor range:match.range];
+                                      value:(id)[UIColor greenColor].CGColor range:match.range];
+                
+                NSAttributedString *matchString = [coloredString attributedSubstringFromRange:match.range];
+                
+                if (highlighting == YES) {
+                    
+                    if ([key isEqualToString:@"url"]) {
+                        [coloredString replaceCharactersInRange:NSMakeRange(match.range.location, 4)   withString:@"网页链接"];
+//                        [coloredString deleteCharactersInRange:match.range];
+//                        [coloredString addAttribute:(NSString*)kCTForegroundColorAttributeName value:[UIColor blueColor] range:match.range];
+                        
+                        NSLog(@"%@",matchString.string);
+                    }else if ([key isEqualToString:@"account"]){
+                        NSLog(@"%@",matchString.string);
+                    }else if ([key isEqualToString:@"topic"]){
+                        NSLog(@"%@",matchString.string);
+                    }else if ([key isEqualToString:@"emoji"]){
+                        NSLog(@"%@",matchString.string);
+                    }
+                }
+
+                
                 double delayInSeconds = 1.5;
                 dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
                 dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -152,11 +174,13 @@ static inline NSRegularExpression * TopicRegularExpression() {
                 UIColor *highlightColor = highlightColors[key];
                 [coloredString addAttribute:(NSString*)kCTForegroundColorAttributeName value:(id)highlightColor.CGColor range:match.range];
                 if ([key isEqualToString:@"url"]) {
-//                    [coloredString replaceCharactersInRange:match.range withString:@"0"];
-                    [coloredString addAttribute:(NSString*)kCTForegroundColorAttributeName value:[UIColor blueColor] range:match.range];
+                    [coloredString replaceCharactersInRange:NSMakeRange(match.range.location, 4)   withString:@"网页链接"];
+                }else if ([key isEqualToString:@"emoji"]){
+            
 
                 }
-            }
+                
+              }
         }
     }
     return coloredString;
@@ -385,6 +409,7 @@ static inline NSRegularExpression * TopicRegularExpression() {
                     runRect=CGRectMake(lineOrigin.x + offset, (self.height+5)-y-height+runDescent/2, runRect.size.width, height);
                     NSRange nRange = NSMakeRange(range.location, range.length);
                     [framesDict setValue:[NSValue valueWithCGRect:runRect] forKey:NSStringFromRange(nRange)];
+
                 }
             }
         }

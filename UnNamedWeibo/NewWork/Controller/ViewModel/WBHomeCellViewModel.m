@@ -186,7 +186,7 @@
 //        btnUrl.frame=CGRectMake(0,0,44,18);
 //        [attributedLabel addView:btnUrl range:keywordModel.range];
 //    }
-//    
+//
 //    //at
 //    for (NSInteger i=0;i<self.atPersonArray.count;++i)
 //    {

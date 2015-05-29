@@ -83,6 +83,7 @@
     
     
     _contentImageView=[[WBContentImageView alloc]init];
+    _contentImageView.containerViewController = self.containerViewController;
     [self.contentView addSubview:_contentImageView];
     
     
@@ -105,8 +106,6 @@
 -(void)setHomeCellViewModel:(WBHomeCellViewModel *)homeCellViewModel
 {
     
-
-
     _homeCellViewModel=homeCellViewModel;
     drawed = YES;
     _headView.homeCellViewModel=homeCellViewModel;

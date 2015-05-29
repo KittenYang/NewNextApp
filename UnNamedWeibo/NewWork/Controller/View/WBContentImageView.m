@@ -7,6 +7,8 @@
 //
 
 #import "WBContentImageView.h"
+#import "IDMPhoto.h"
+#import "IDMPhotoBrowser.h"
 
 
 #define SIZE_IMAGE 80
@@ -118,6 +120,8 @@
     image.contentMode=UIViewContentModeScaleAspectFill;
     image.backgroundColor = [UIColor lightGrayColor];
     image.clipsToBounds=YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapPhoto:)];
+    [image addGestureRecognizer:tap];
     return image;
 }
 
@@ -138,6 +142,27 @@
             image.hidden = YES;
         }
     }
+}
+
+
+#pragma 图片点击事件
+-(void)tapPhoto:(UITapGestureRecognizer *)tapGes{
+    
+    UIImageView *tapedImgView = (UIImageView *)tapGes.view;
+    
+    NSArray *photosWithURL = [IDMPhoto photosWithURLs:self.urlArray];//photos objects的数组
+    
+    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc] initWithPhotos:photosWithURL animatedFromView:tapedImgView];
+//    browser.delegate = self;
+    browser.displayActionButton = NO;
+    browser.displayArrowButton = YES;
+    browser.displayCounterLabel = YES;
+    browser.usePopAnimation = YES;
+    browser.scaleImage = tapedImgView.image;
+    [browser setInitialPageIndex:tapedImgView.tag];
+    
+    [self.containerViewController presentViewController:browser animated:YES completion:nil];
+
 }
 
 

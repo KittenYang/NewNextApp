@@ -14,6 +14,7 @@ pod 'KYCuteView', '~> 1.3.0'
 pod 'KYGooeyMenu', '~> 1.0.5'
 pod 'UITableViewController+KYSelfSizingPushFix', '~> 1.0.0'
 
+pod 'KMCGeigerCounter', '~> 0.2.2'
 pod 'PureLayout', '~> 2.0.6'
 pod 'MJRefresh', '~> 1.4.6'
 pod 'SVProgressHUD', '~> 1.1.3'

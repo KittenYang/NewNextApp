@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6D5C296B83BA6BA9EFC7330F"
+               BlueprintIdentifier = "D13414EF7F5470C34FB498C4"
                BuildableName = "libPods-UITableViewController+KYSelfSizingPushFix.a"
                BlueprintName = "Pods-UITableViewController+KYSelfSizingPushFix"
                ReferencedContainer = "container:Pods.xcodeproj">

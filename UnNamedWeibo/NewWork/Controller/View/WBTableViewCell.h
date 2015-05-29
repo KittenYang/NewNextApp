@@ -12,7 +12,7 @@
 @interface WBTableViewCell : UITableViewCell
 
 @property(strong,nonatomic)WBHomeCellViewModel *homeCellViewModel;
-
+@property(strong,nonatomic)UIViewController *containerViewController;
 
 /**
  *  获取行的高度

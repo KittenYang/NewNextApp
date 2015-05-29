@@ -11,7 +11,7 @@
 @interface WBContentImageView : UIView
 
 @property(strong,nonatomic)NSMutableArray *urlArray;
-
+@property(strong,nonatomic)UIViewController *containerViewController;
 
 
 /**

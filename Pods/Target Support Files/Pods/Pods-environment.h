@@ -60,6 +60,12 @@
 #define COCOAPODS_VERSION_MINOR_IDMPhotoBrowser 6
 #define COCOAPODS_VERSION_PATCH_IDMPhotoBrowser 2
 
+// KMCGeigerCounter
+#define COCOAPODS_POD_AVAILABLE_KMCGeigerCounter
+#define COCOAPODS_VERSION_MAJOR_KMCGeigerCounter 0
+#define COCOAPODS_VERSION_MINOR_KMCGeigerCounter 2
+#define COCOAPODS_VERSION_PATCH_KMCGeigerCounter 2
+
 // KYCuteView
 #define COCOAPODS_POD_AVAILABLE_KYCuteView
 #define COCOAPODS_VERSION_MAJOR_KYCuteView 1
