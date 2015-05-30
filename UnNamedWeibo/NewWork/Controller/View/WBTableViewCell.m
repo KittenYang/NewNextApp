@@ -88,7 +88,7 @@
     
     
     
-    _contentImageView=[[WBContentImageView alloc]init];
+    _contentImageView=[[WBContentImageView alloc]initWithStyle:WBContentImageScrollStyle];
     [self.contentView addSubview:_contentImageView];
     
     
@@ -117,15 +117,14 @@
     _contentAttributedLabel.frame = CGRectMake(CELL_SIDEMARGIN,CELL_HEADVIEW_HEIGHT+CELL_PADDING_6,Getwidth-CELL_SIDEMARGIN*2,homeCellViewModel.contentHeight);
     [_contentAttributedLabel  setText:homeCellViewModel.statusModel.text];
 
-    
+//转发内容
     if (homeCellViewModel.statusModel.retweeted_status!=nil)
     {
         _retweetedAttributedLabel.hidden=NO;
         _retweetedView.hidden=NO;
         
         
-        WBHomeCellViewModel *retweetedViewModel=homeCellViewModel.statusModel.retweeted_status;
-        
+        WBHomeCellViewModel *retweetedViewModel=(WBHomeCellViewModel *)homeCellViewModel.statusModel.retweeted_status;
         _retweetedAttributedLabel.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6*2+_contentAttributedLabel.bottom,Getwidth-CELL_SIDEMARGIN*2,retweetedViewModel.contentHeight);
         [_retweetedAttributedLabel setText:retweetedViewModel.statusModel.text];
         
@@ -154,6 +153,8 @@
         
         _bottomView.frame=CGRectMake(0,_retweetedView.bottom,Getwidth, CELL_BOTTOM_HEIGHT);
     }
+    
+//源内容
     else
     {
         _retweetedAttributedLabel.hidden=YES;

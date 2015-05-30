@@ -53,7 +53,7 @@
 
 
 //布局字体
-#define TITLE_FONT_SIZE [UIFont systemFontOfSize:17.f]
+#define TITLE_FONT_SIZE [UIFont systemFontOfSize:16.f]
 #define SUBTITLE_FONT_SIZE [UIFont systemFontOfSize:15.f]
 #define BUTTON_FONT_SIZE [UIFont systemFontOfSize:13.f]
 #define TITLE_LINESPACE  6.f

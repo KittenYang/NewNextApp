@@ -218,7 +218,8 @@
 //    self.attributedString=[attributedLabel attributedText];
     
     float width = Getwidth - CELL_PADDING_6*2;
-    CGSize size = [self.statusModel.text sizeWithConstrainedToWidth:width fromFont:TITLE_FONT_SIZE lineSpace:TITLE_LINESPACE];
+    NSLog(@"%s",self.statusModel.isRepost?"YES":"NO");
+    CGSize size = [self.statusModel.text sizeWithConstrainedToWidth:width fromFont:self.statusModel.isRepost? SUBTITLE_FONT_SIZE:TITLE_FONT_SIZE lineSpace:TITLE_LINESPACE];
     NSInteger sizeHeight = (size.height+.5);
 
     
@@ -229,6 +230,6 @@
 #pragma 暂时这样子处理图片
 -(void)calculateContentImageViewHegiht
 {
-    self.contengImageHeight=[WBContentImageView getContentImageViewHeight:self.statusModel.pic_urls.count];
+    self.contengImageHeight=[WBContentImageView getContentImageViewHeight:self.statusModel.pic_urls.count style:WBContentImageScrollStyle];
 }
 @end

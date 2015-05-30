@@ -11,11 +11,16 @@
 #import "IDMPhotoBrowser.h"
 
 
+
 #define SIZE_IMAGE 80
+#define SIZE_GAP_IMG 5
+#define SIZE_GAP_LEFT 15
 
 
 @interface WBContentImageView()
 
+@property(nonatomic,assign)WBContentImageStyle imageLayoutStyle;
+@property(nonatomic,strong)UIScrollView *mulitPhotoScrollView;
 @property(nonatomic,strong)UIImageView *imageOne;
 @property(nonatomic,strong)UIImageView *imageTwo;
 @property(nonatomic,strong)UIImageView *imageThree;
@@ -32,14 +37,14 @@
 
 @implementation WBContentImageView
 
--(instancetype)init
-{
+-(instancetype)initWithStyle:(WBContentImageStyle)style{
     self=[super init];
     if (self)
     {
         self.backgroundColor=[UIColor whiteColor];
+        self.imageLayoutStyle = style;
         [self configurationContentView];
-        [self configurationLocation];
+        [self configurationLocation:style];
     }
     return self;
 }
@@ -94,24 +99,48 @@
 
 
 #pragma mark － 配置位置
--(void)configurationLocation
-{
-    _imageOne.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6,SIZE_IMAGE,SIZE_IMAGE);
-    _imageTwo.frame=CGRectMake(CELL_PADDING_6+_imageOne.right,CELL_PADDING_6,SIZE_IMAGE,SIZE_IMAGE);
-    _imageThree.frame=CGRectMake(CELL_PADDING_6+_imageTwo.right,CELL_PADDING_6,SIZE_IMAGE,SIZE_IMAGE);
+-(void)configurationLocation:(WBContentImageStyle)style{
     
-    
-    
-    
-    _imageFour.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6+_imageOne.bottom,SIZE_IMAGE,SIZE_IMAGE);
-    _imageFive.frame=CGRectMake(CELL_PADDING_6+_imageFour.right,CELL_PADDING_6+_imageOne.bottom,SIZE_IMAGE,SIZE_IMAGE);
-    _imageSix.frame=CGRectMake(CELL_PADDING_6+_imageFive.right,CELL_PADDING_6+_imageOne.bottom,SIZE_IMAGE,SIZE_IMAGE);
-    
-    
-    _imageSeven.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
-    _imageEight.frame=CGRectMake(CELL_PADDING_6+_imageSeven.right,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
-    _imageNine.frame=CGRectMake(CELL_PADDING_6+_imageEight.right,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
+    if (style == WBContentImageMatrixStyle) {
+        _imageOne.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6,SIZE_IMAGE,SIZE_IMAGE);
+        _imageTwo.frame=CGRectMake(CELL_PADDING_6+_imageOne.right,CELL_PADDING_6,SIZE_IMAGE,SIZE_IMAGE);
+        _imageThree.frame=CGRectMake(CELL_PADDING_6+_imageTwo.right,CELL_PADDING_6,SIZE_IMAGE,SIZE_IMAGE);
+        
+        _imageFour.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6+_imageOne.bottom,SIZE_IMAGE,SIZE_IMAGE);
+        _imageFive.frame=CGRectMake(CELL_PADDING_6+_imageFour.right,CELL_PADDING_6+_imageOne.bottom,SIZE_IMAGE,SIZE_IMAGE);
+        _imageSix.frame=CGRectMake(CELL_PADDING_6+_imageFive.right,CELL_PADDING_6+_imageOne.bottom,SIZE_IMAGE,SIZE_IMAGE);
+        
+        
+        _imageSeven.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
+        _imageEight.frame=CGRectMake(CELL_PADDING_6+_imageSeven.right,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
+        _imageNine.frame=CGRectMake(CELL_PADDING_6+_imageEight.right,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
+    }else if (self.imageLayoutStyle == WBContentImageScrollStyle){
+        
+        self.mulitPhotoScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, Getwidth, SIZE_GAP_IMG*2+SIZE_IMAGE)];
+        self.mulitPhotoScrollView.scrollsToTop = NO;
+        self.mulitPhotoScrollView.showsHorizontalScrollIndicator = NO;
+        self.mulitPhotoScrollView.showsVerticalScrollIndicator = NO;
+        [self addSubview:self.mulitPhotoScrollView];
+        
+
+        for (NSInteger i=0; i<9; i++) {
+            float x = SIZE_GAP_LEFT+(SIZE_IMAGE+SIZE_GAP_IMG)*i;
+            float y = SIZE_GAP_IMG;
+            UIImageView *thumb1 = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, SIZE_IMAGE, SIZE_IMAGE)];
+            thumb1.contentMode=UIViewContentModeScaleAspectFill;
+            thumb1.clipsToBounds=YES;
+            thumb1.userInteractionEnabled = YES;
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapPhoto:)];
+            [thumb1 addGestureRecognizer:tap];
+
+            thumb1.tag = i+1;
+            [self.mulitPhotoScrollView addSubview:thumb1];
+        }
+        
+
+    }
 }
+
 
 
 #pragma 初始化
@@ -130,27 +159,56 @@
 #pragma 赋值
 -(void)setUrlArray:(NSMutableArray *)urlArray
 {
+    
     NSMutableArray *arr = [NSMutableArray array];
+ 
+
     for (NSInteger i = 0; i<urlArray.count; i++) {
+
         NSString *thumbnailImageUrl = urlArray[i];
-        thumbnailImageUrl = [thumbnailImageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        if (![thumbnailImageUrl hasSuffix:@".gif"]) {
+
+            thumbnailImageUrl = [thumbnailImageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        }
         [arr addObject:thumbnailImageUrl];
     }
+    
     _urlArray = arr;
 
-    
-    for (NSInteger i=0;i<9;++i)
-    {
-        UIImageView *image=(UIImageView *)[self viewWithTag:i+1];
 
-        if (i<self.urlArray.count)
+    if (self.imageLayoutStyle == WBContentImageMatrixStyle) {
+        for (NSInteger i=0;i<9;++i)
         {
-            image.hidden = NO;
-            [image sd_setImageWithURL:[NSURL URLWithString:[self.urlArray objectAtIndex:i]] placeholderImage:nil options:SDWebImageLowPriority];
-        } else
-        {
-            image.hidden = YES;
+            UIImageView *image=(UIImageView *)[self viewWithTag:i+1];
+            
+            if (i<self.urlArray.count)
+            {
+                image.hidden = NO;
+                [image sd_setImageWithURL:[NSURL URLWithString:[self.urlArray objectAtIndex:i]] placeholderImage:nil options:SDWebImageLowPriority];
+            } else
+            {
+                image.hidden = YES;
+            }
         }
+    }else if (self.imageLayoutStyle == WBContentImageScrollStyle){
+        self.mulitPhotoScrollView.contentSize = CGSizeMake(SIZE_IMAGE*self.urlArray.count + SIZE_GAP_IMG*(self.urlArray.count-1) + SIZE_GAP_LEFT*2, self.mulitPhotoScrollView.height);
+        self.mulitPhotoScrollView.contentOffset = CGPointZero;
+        
+        for (NSInteger i=0;i<9;++i)
+        {
+            
+            UIImageView *image=(UIImageView *)[self.mulitPhotoScrollView viewWithTag:i+1];
+
+            if (i<self.urlArray.count)
+            {
+                image.hidden = NO;
+                [image sd_setImageWithURL:[NSURL URLWithString:[self.urlArray objectAtIndex:i]] placeholderImage:nil options:SDWebImageLowPriority];
+            } else
+            {
+                image.hidden = YES;
+            }
+        }
+        
     }
     
 }
@@ -179,23 +237,33 @@
 
 ////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////
-+(float)getContentImageViewHeight:(NSInteger)count
-{
-    if (count>=1&&count<=3)
-    {
-        return CELL_PADDING_6*2+SIZE_IMAGE;
++(float)getContentImageViewHeight:(NSInteger)count style:(WBContentImageStyle)style{
+    
+    if (style == WBContentImageMatrixStyle) {
+        
+        if (count>=1&&count<=3)
+        {
+            return CELL_PADDING_6*2+SIZE_IMAGE;
+        }
+        else if (count>=4&&count<=6)
+        {
+            return CELL_PADDING_6*3+SIZE_IMAGE*2;
+        }
+        else if(count>=7&&count<=9)
+        {
+            return CELL_PADDING_6*4+SIZE_IMAGE*3;
+        }
+        else
+        {
+            return 0;
+        }
+    }else if (style == WBContentImageScrollStyle){
+        if (count > 0) {
+            return SIZE_GAP_IMG*2+SIZE_IMAGE;
+        }
     }
-    else if (count>=4&&count<=6)
-    {
-        return CELL_PADDING_6*3+SIZE_IMAGE*2;
-    }
-    else if(count>=7&&count<=9)
-    {
-        return CELL_PADDING_6*4+SIZE_IMAGE*3;
-    }
-    else
-    {
-        return 0;
-    }
+    
+    return 0;
+
 }
 @end

@@ -13,6 +13,7 @@
 @property(strong,nonatomic)WBStatusModel *statusModel;
 @property(strong,nonatomic)NSAttributedString *attributedString;
 
+
 @property(strong,nonatomic)NSArray *emotionArray;//表情数组
 @property(strong,nonatomic)NSArray *atPersonArray;//at
 @property(strong,nonatomic)NSArray *urlArray;//网址数组

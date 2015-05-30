@@ -6,6 +6,11 @@
 //  Copyright (c) 2015年 Sky. All rights reserved.
 //
 
+typedef enum : NSUInteger {
+    WBContentImageScrollStyle,
+    WBContentImageMatrixStyle,
+} WBContentImageStyle;
+
 #import <UIKit/UIKit.h>
 
 @interface WBContentImageView : UIView
@@ -13,6 +18,7 @@
 @property(strong,nonatomic)NSMutableArray *urlArray;
 @property(strong,nonatomic)UIViewController *containerViewController;
 
+-(instancetype)initWithStyle:(WBContentImageStyle)style;
 
 /**
  *  获取高度
@@ -21,6 +27,6 @@
  *
  *  @return
  */
-+(float)getContentImageViewHeight:(NSInteger)count;
++(float)getContentImageViewHeight:(NSInteger)count style:(WBContentImageStyle)style;
 
 @end

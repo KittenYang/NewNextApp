@@ -35,6 +35,11 @@
         WSet_Dic_Obj_Key(dic,self.visible,@"visible");
         WSet_Dic_Obj_Key(dic,self.pic_urls,@"pic_urls");
         
+        if (self.retweeted_status) {
+            NSLog(@"%@",self.retweeted_status);
+//            self.retweeted_status.isRepost = YES;
+        }
+        
         [self formatProcessing];
     }
     return self;
