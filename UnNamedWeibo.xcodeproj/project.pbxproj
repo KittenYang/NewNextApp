@@ -692,6 +692,11 @@
 		5F8737321A8F2399000CADF4 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8737311A8F2399000CADF4 /* BaseViewController.m */; };
 		5F8737361A8F23EA000CADF4 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8737351A8F23EA000CADF4 /* BaseTableViewController.m */; };
 		5FABDD4D1AE7E44800B8A23E /* DetailWeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FABDD4C1AE7E44800B8A23E /* DetailWeiboView.m */; };
+		5FDC185A1B1E11AE003AC064 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC18521B1E11AE003AC064 /* UIImage+ImageEffects.m */; };
+		5FDC185B1B1E11AE003AC064 /* KYPhotoGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC18541B1E11AE003AC064 /* KYPhotoGallery.m */; };
+		5FDC185C1B1E11AE003AC064 /* PhotoGalleryImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC18571B1E11AE003AC064 /* PhotoGalleryImageView.m */; };
+		5FDC185D1B1E11AE003AC064 /* PhotoGalleryScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC18591B1E11AE003AC064 /* PhotoGalleryScrollView.m */; };
+		5FDC18611B1E1398003AC064 /* UCZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC18601B1E1398003AC064 /* UCZProgressView.m */; };
 		5FDF30DB1AA0AAC8007E6ECA /* VBFJellyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF30DA1AA0AAC8007E6ECA /* VBFJellyView.m */; };
 		5FDF30DF1AA0AAFA007E6ECA /* JellyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF30DE1AA0AAFA007E6ECA /* JellyButton.m */; };
 		5FE0C7671AB02F4900D4D0F7 /* Expression_100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FE0C6F51AB02F4900D4D0F7 /* Expression_100@2x.png */; };
@@ -1592,6 +1597,17 @@
 		5F8737351A8F23EA000CADF4 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		5FABDD4B1AE7E44800B8A23E /* DetailWeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWeiboView.h; sourceTree = "<group>"; };
 		5FABDD4C1AE7E44800B8A23E /* DetailWeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWeiboView.m; sourceTree = "<group>"; };
+		5FDC18501B1E11AE003AC064 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		5FDC18511B1E11AE003AC064 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		5FDC18521B1E11AE003AC064 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		5FDC18531B1E11AE003AC064 /* KYPhotoGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYPhotoGallery.h; sourceTree = "<group>"; };
+		5FDC18541B1E11AE003AC064 /* KYPhotoGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYPhotoGallery.m; sourceTree = "<group>"; };
+		5FDC18561B1E11AE003AC064 /* PhotoGalleryImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryImageView.h; sourceTree = "<group>"; };
+		5FDC18571B1E11AE003AC064 /* PhotoGalleryImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryImageView.m; sourceTree = "<group>"; };
+		5FDC18581B1E11AE003AC064 /* PhotoGalleryScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGalleryScrollView.h; sourceTree = "<group>"; };
+		5FDC18591B1E11AE003AC064 /* PhotoGalleryScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGalleryScrollView.m; sourceTree = "<group>"; };
+		5FDC185F1B1E1398003AC064 /* UCZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCZProgressView.h; sourceTree = "<group>"; };
+		5FDC18601B1E1398003AC064 /* UCZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCZProgressView.m; sourceTree = "<group>"; };
 		5FDF30D91AA0AAC8007E6ECA /* VBFJellyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFJellyView.h; sourceTree = "<group>"; };
 		5FDF30DA1AA0AAC8007E6ECA /* VBFJellyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFJellyView.m; sourceTree = "<group>"; };
 		5FDF30DD1AA0AAFA007E6ECA /* JellyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JellyButton.h; sourceTree = "<group>"; };
@@ -2223,6 +2239,8 @@
 		5F3741431B15AF7000D0409D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				5FDC185E1B1E1398003AC064 /* UCZProgressView */,
+				5FDC184E1B1E11AE003AC064 /* KYElegantPhotoGallery */,
 				5F3741441B15AF7000D0409D /* NSDate+ShortCut.h */,
 				5F3741451B15AF7000D0409D /* NSDate+ShortCut.m */,
 				5F3741461B15AF7000D0409D /* TYAttributedLabel */,
@@ -2864,6 +2882,47 @@
 				5F28895E1AA8BD1700E64BAD /* ReWeiboImgCollectionViewCell.m */,
 			);
 			name = BaseTableViewController;
+			sourceTree = "<group>";
+		};
+		5FDC184E1B1E11AE003AC064 /* KYElegantPhotoGallery */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC184F1B1E11AE003AC064 /* Helpers */,
+				5FDC18531B1E11AE003AC064 /* KYPhotoGallery.h */,
+				5FDC18541B1E11AE003AC064 /* KYPhotoGallery.m */,
+				5FDC18551B1E11AE003AC064 /* PhotoGalleryScrollView */,
+			);
+			path = KYElegantPhotoGallery;
+			sourceTree = "<group>";
+		};
+		5FDC184F1B1E11AE003AC064 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC18501B1E11AE003AC064 /* Macro.h */,
+				5FDC18511B1E11AE003AC064 /* UIImage+ImageEffects.h */,
+				5FDC18521B1E11AE003AC064 /* UIImage+ImageEffects.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5FDC18551B1E11AE003AC064 /* PhotoGalleryScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC18561B1E11AE003AC064 /* PhotoGalleryImageView.h */,
+				5FDC18571B1E11AE003AC064 /* PhotoGalleryImageView.m */,
+				5FDC18581B1E11AE003AC064 /* PhotoGalleryScrollView.h */,
+				5FDC18591B1E11AE003AC064 /* PhotoGalleryScrollView.m */,
+			);
+			path = PhotoGalleryScrollView;
+			sourceTree = "<group>";
+		};
+		5FDC185E1B1E1398003AC064 /* UCZProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				5FDC185F1B1E1398003AC064 /* UCZProgressView.h */,
+				5FDC18601B1E1398003AC064 /* UCZProgressView.m */,
+			);
+			path = UCZProgressView;
 			sourceTree = "<group>";
 		};
 		5FDF30DC1AA0AAD0007E6ECA /* VBFJellyView */ = {
@@ -3892,6 +3951,7 @@
 				5F3742D81B15FA4C00D0409D /* WBTableView.m in Sources */,
 				5F7FAD6F1A90DEB600CEF622 /* MainTabViewController.m in Sources */,
 				5F7FADFD1A9475A000CEF622 /* Utils.m in Sources */,
+				5FDC185B1B1E11AE003AC064 /* KYPhotoGallery.m in Sources */,
 				5F8737321A8F2399000CADF4 /* BaseViewController.m in Sources */,
 				5F3742CB1B15DF4E00D0409D /* VVeboLabel.m in Sources */,
 				5F1147D61AB49F90009C75B0 /* DetailViewController.m in Sources */,
@@ -3911,6 +3971,7 @@
 				5F37416B1B15AF7000D0409D /* WBGeoModel.m in Sources */,
 				5F3ABC961AE55AFC0014DA38 /* KYPushTransition.m in Sources */,
 				5F37415E1B15AF7000D0409D /* WBHeadView.m in Sources */,
+				5FDC185A1B1E11AE003AC064 /* UIImage+ImageEffects.m in Sources */,
 				5F3742AA1B15AF7000D0409D /* TYDrawStorage.m in Sources */,
 				5F3742B01B15AF7000D0409D /* UIView+ShortCut.m in Sources */,
 				5F37415D1B15AF7000D0409D /* WBContentImageView.m in Sources */,
@@ -3920,13 +3981,16 @@
 				5F3741651B15AF7000D0409D /* WBManage.m in Sources */,
 				5F3741641B15AF7000D0409D /* WBEmotionManage.m in Sources */,
 				5F3742AE1B15AF7000D0409D /* TYViewStorage.m in Sources */,
+				5FDC18611B1E1398003AC064 /* UCZProgressView.m in Sources */,
 				5F8736451A8C4EF7000CADF4 /* AppDelegate.m in Sources */,
 				5F7FAE901A9B42B800CEF622 /* KYLoadingHUD.m in Sources */,
 				5F3742D21B15EC0100D0409D /* NSString+Additions.m in Sources */,
 				5F7FAD6C1A904CF500CEF622 /* KYCell.m in Sources */,
 				5F3742A91B15AF7000D0409D /* TYAttributedLabel.m in Sources */,
 				5F3741631B15AF7000D0409D /* WBLoginViewController.m in Sources */,
+				5FDC185D1B1E11AE003AC064 /* PhotoGalleryScrollView.m in Sources */,
 				5F3741681B15AF7000D0409D /* WBCommentModel.m in Sources */,
+				5FDC185C1B1E11AE003AC064 /* PhotoGalleryImageView.m in Sources */,
 				5F3742A61B15AF7000D0409D /* NSDate+ShortCut.m in Sources */,
 				5F3742A81B15AF7000D0409D /* TYAttributedLabel+UIImageAndUIView.m in Sources */,
 				5F37415C1B15AF7000D0409D /* WBBottomView.m in Sources */,

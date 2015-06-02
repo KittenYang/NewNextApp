@@ -9,6 +9,7 @@
 #import "WBContentImageView.h"
 #import "IDMPhoto.h"
 #import "IDMPhotoBrowser.h"
+#import "KYPhotoGallery.h"
 
 
 
@@ -31,6 +32,7 @@
 @property(nonatomic,strong)UIImageView *imageEight;
 @property(nonatomic,strong)UIImageView *imageNine;
 
+@property(nonatomic,strong)NSMutableArray *imageViewArray;  //保存所有UIImageView
 
 @end
 
@@ -114,6 +116,7 @@
         _imageSeven.frame=CGRectMake(CELL_SIDEMARGIN,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
         _imageEight.frame=CGRectMake(CELL_PADDING_6+_imageSeven.right,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
         _imageNine.frame=CGRectMake(CELL_PADDING_6+_imageEight.right,CELL_PADDING_6+_imageFour.bottom,SIZE_IMAGE,SIZE_IMAGE);
+        
     }else if (self.imageLayoutStyle == WBContentImageScrollStyle){
         
         self.mulitPhotoScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, Getwidth, SIZE_GAP_IMG*2+SIZE_IMAGE)];
@@ -122,22 +125,21 @@
         self.mulitPhotoScrollView.showsVerticalScrollIndicator = NO;
         [self addSubview:self.mulitPhotoScrollView];
         
-
-        for (NSInteger i=0; i<9; i++) {
-            float x = SIZE_GAP_LEFT+(SIZE_IMAGE+SIZE_GAP_IMG)*i;
-            float y = SIZE_GAP_IMG;
-            UIImageView *thumb1 = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, SIZE_IMAGE, SIZE_IMAGE)];
-            thumb1.contentMode=UIViewContentModeScaleAspectFill;
-            thumb1.clipsToBounds=YES;
-            thumb1.userInteractionEnabled = YES;
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapPhoto:)];
-            [thumb1 addGestureRecognizer:tap];
-
-            thumb1.tag = i+1;
-            [self.mulitPhotoScrollView addSubview:thumb1];
+        @autoreleasepool {
+            for (NSInteger i=0; i<9; i++) {
+                float x = SIZE_GAP_LEFT+(SIZE_IMAGE+SIZE_GAP_IMG)*i;
+                float y = SIZE_GAP_IMG;
+                UIImageView *thumb1 = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, SIZE_IMAGE, SIZE_IMAGE)];
+                thumb1.contentMode=UIViewContentModeScaleAspectFill;
+                thumb1.clipsToBounds=YES;
+                thumb1.userInteractionEnabled = YES;
+                UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapPhoto:)];
+                [thumb1 addGestureRecognizer:tap];
+                
+                thumb1.tag = i+1;
+                [self.mulitPhotoScrollView addSubview:thumb1];
+            }
         }
-        
-
     }
 }
 
@@ -159,54 +161,67 @@
 #pragma 赋值
 -(void)setUrlArray:(NSMutableArray *)urlArray
 {
-    
-    NSMutableArray *arr = [NSMutableArray array];
- 
-
-    for (NSInteger i = 0; i<urlArray.count; i++) {
-
-        NSString *thumbnailImageUrl = urlArray[i];
-        if (![thumbnailImageUrl hasSuffix:@".gif"]) {
-
-            thumbnailImageUrl = [thumbnailImageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
-        }
-        [arr addObject:thumbnailImageUrl];
+    if (urlArray == _urlArray) {
+        return;
     }
     
-    _urlArray = arr;
-
-
-    if (self.imageLayoutStyle == WBContentImageMatrixStyle) {
-        for (NSInteger i=0;i<9;++i)
-        {
-            UIImageView *image=(UIImageView *)[self viewWithTag:i+1];
+    NSMutableArray *arr = [NSMutableArray array];
+    @autoreleasepool {
+        for (NSInteger i = 0; i<urlArray.count; i++) {
             
-            if (i<self.urlArray.count)
+            NSString *thumbnailImageUrl = urlArray[i];
+            if (![thumbnailImageUrl hasSuffix:@".gif"]) {
+                
+                thumbnailImageUrl = [thumbnailImageUrl stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+            }
+            [arr addObject:thumbnailImageUrl];
+        }
+        
+    }
+    
+    _urlArray = [NSMutableArray arrayWithArray:arr];
+
+
+    self.imageViewArray = [NSMutableArray array];
+    if (self.imageLayoutStyle == WBContentImageMatrixStyle) {
+        @autoreleasepool {
+            for (NSInteger i=0;i<9;i++)
             {
-                image.hidden = NO;
-                [image sd_setImageWithURL:[NSURL URLWithString:[self.urlArray objectAtIndex:i]] placeholderImage:nil options:SDWebImageLowPriority];
-            } else
-            {
-                image.hidden = YES;
+                UIImageView *image=(UIImageView *)[self viewWithTag:i+1];
+                
+                if (i<self.urlArray.count)
+                {
+                    image.hidden = NO;
+                    [image sd_setImageWithURL:[NSURL URLWithString:[urlArray objectAtIndex:i]] placeholderImage:nil options:SDWebImageLowPriority];
+                    [self.imageViewArray addObject:image];
+                    
+                } else
+                {
+                    image.hidden = YES;
+                }
             }
         }
     }else if (self.imageLayoutStyle == WBContentImageScrollStyle){
         self.mulitPhotoScrollView.contentSize = CGSizeMake(SIZE_IMAGE*self.urlArray.count + SIZE_GAP_IMG*(self.urlArray.count-1) + SIZE_GAP_LEFT*2, self.mulitPhotoScrollView.height);
         self.mulitPhotoScrollView.contentOffset = CGPointZero;
         
-        for (NSInteger i=0;i<9;++i)
-        {
-            
-            UIImageView *image=(UIImageView *)[self.mulitPhotoScrollView viewWithTag:i+1];
-
-            if (i<self.urlArray.count)
+        @autoreleasepool {
+            for (NSInteger i=0;i<9;i++)
             {
-                image.hidden = NO;
-                [image sd_setImageWithURL:[NSURL URLWithString:[self.urlArray objectAtIndex:i]] placeholderImage:nil options:SDWebImageLowPriority];
-            } else
-            {
-                image.hidden = YES;
+                
+                UIImageView *image=(UIImageView *)[self.mulitPhotoScrollView viewWithTag:i+1];
+                
+                if (i<self.urlArray.count)
+                {
+                    image.hidden = NO;
+                    [image sd_setImageWithURL:[NSURL URLWithString:[urlArray objectAtIndex:i]] placeholderImage:nil options:SDWebImageLowPriority];
+                    [self.imageViewArray addObject:image];
+                } else
+                {
+                    image.hidden = YES;
+                }
             }
+
         }
         
     }
@@ -219,18 +234,23 @@
     
     UIImageView *tapedImgView = (UIImageView *)tapGes.view;
     
-    NSArray *photosWithURL = [IDMPhoto photosWithURLs:self.urlArray];//photos objects的数组
+//    NSArray *photosWithURL = [IDMPhoto photosWithURLs:self.urlArray];//photos objects的数组
+//    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc] initWithPhotos:photosWithURL animatedFromView:tapedImgView];
+//    browser.displayActionButton = NO;
+//    browser.displayArrowButton = YES;
+//    browser.displayCounterLabel = YES;
+//    browser.usePopAnimation = YES;
+//    browser.scaleImage = tapedImgView.image;
+//    [browser setInitialPageIndex:tapedImgView.tag-1];
+//    
+//    [self.containerViewController presentViewController:browser animated:YES completion:nil];
     
-    IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc] initWithPhotos:photosWithURL animatedFromView:tapedImgView];
-//    browser.delegate = self;
-    browser.displayActionButton = NO;
-    browser.displayArrowButton = YES;
-    browser.displayCounterLabel = YES;
-    browser.usePopAnimation = YES;
-    browser.scaleImage = tapedImgView.image;
-    [browser setInitialPageIndex:tapedImgView.tag-1];
     
-    [self.containerViewController presentViewController:browser animated:YES completion:nil];
+    KYPhotoGallery *photoGallery = [[KYPhotoGallery alloc]initWithTappedImageView:tapedImgView andImageUrls:self.urlArray andInitialIndex:tapedImgView.tag];
+    photoGallery.imageViewArray = self.imageViewArray;
+    [photoGallery finishAsynDownload:^{
+        [self.containerViewController presentViewController:photoGallery animated:NO completion:nil];
+    }];
 
 }
 
@@ -266,4 +286,12 @@
     return 0;
 
 }
+
+
+-(void)dealloc{
+    self.imageViewArray = nil;
+    
+}
+
+
 @end
