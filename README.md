@@ -1,2 +1,3 @@
 # NewNextApp
-接力之前的NextApp项目，由于版本控制操作失误出现了不可逆转的结果，因此我只能新开一个repo继续这款App了。
+
+Stay tuned...
